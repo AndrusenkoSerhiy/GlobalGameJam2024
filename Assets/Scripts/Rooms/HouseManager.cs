@@ -4,24 +4,28 @@ using Random = UnityEngine.Random;
 
 namespace Rooms{
   public class HouseManager : MonoBehaviour{
-    [SerializeField] private List<Room> _allRooms = new();
     [SerializeField] private List<Room> _curHouse = new();
-    [SerializeField] private int _houseRooms;
     [SerializeField] private Room _curRoom;
     [SerializeField] private Room _prevRoom;
+    
     private List<Room> _availableRoom = new();
-    private void Awake(){
-      _availableRoom = _allRooms;
+    private int _houseRooms;
+    
+    public void Init(){
+      var houseData = GameManager.GameManager.Instance.HouseDatas[0];
+      _availableRoom.AddRange(houseData.AvailableRooms);
+      _houseRooms = houseData.HouseRooms;
+      
       GenerateHouse();
       SetRoomPos();
     }
 
     private void GenerateHouse(){
       for (int i = 0; i < _houseRooms; i++){
-        _curHouse.Add(GetRandomRoom());
-      }
-      for (int i = 0; i < _curHouse.Count; i++){
-        _curHouse[i].RoomIndex = i;
+        var rndRoom = GetRandomRoom();
+        var room = Instantiate(rndRoom, new Vector3(0, -10, 0), Quaternion.identity);
+        room.RoomIndex = i;
+        _curHouse.Add(room);
       }
       SetCurRoom(0);
     }

@@ -1,6 +1,8 @@
+using System;
 using UnityEngine;
 
 namespace Rooms{
+  [Serializable]
   public class Room : MonoBehaviour{
     [SerializeField] private int _roomIndex;
     
