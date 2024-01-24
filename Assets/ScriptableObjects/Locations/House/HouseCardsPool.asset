@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6537c48c0d9c4307aee4c1aff4bd41b6, type: 3}
+  m_Name: HouseCardsPool
+  m_EditorClassIdentifier: 
+  AllCards:
+  - CardData: {fileID: 11400000, guid: f8eba9f014561d14ab2ba18e1da5521f, type: 2}
+    Count: 3
+  - CardData: {fileID: 11400000, guid: be0f7e6ed4a7cf94dbcc968ad2d91385, type: 2}
+    Count: 3
+  - CardData: {fileID: 11400000, guid: 6310b5cc65a9be547ad93d89934c0589, type: 2}
+    Count: 3
