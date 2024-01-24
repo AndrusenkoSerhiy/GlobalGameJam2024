@@ -44,4 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a444b310d9a54a9889c46c0a7d77d8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charactersInScene: []
+  CurrentLocationData: {fileID: 0}
+  ActorsInScene: []
+  CardsMonitorUI: {fileID: 0}
+  HouseManager: {fileID: 0}
+  LocationsPool:
+  - {fileID: 11400000, guid: c32dce37f9501f34b839e891a9bf50b0, type: 2}
+  - {fileID: 11400000, guid: 7405a49ca7b67a545b4ac44c6f5fdeb6, type: 2}

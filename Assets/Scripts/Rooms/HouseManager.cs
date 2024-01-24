@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Location;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -11,11 +12,18 @@ namespace Rooms{
     private List<Room> _availableRoom = new();
     private int _houseRooms;
     
-    public void Init(){
-      var houseData = GameManager.GameManager.Instance.HouseDatas[0];
-      _availableRoom.AddRange(houseData.AvailableRooms);
-      _houseRooms = houseData.HouseRooms;
+    public void Init(LocationData locData){
+      //ClearPrevious
+      _curHouse.ForEach(r=>Destroy(r.gameObject));
+      _curHouse.Clear();
+      _curRoom = null;
+      _prevRoom = null;
+      _availableRoom.Clear();
       
+      //Init new
+      var houseData = locData;
+      _houseRooms = houseData.HouseRooms;
+      _availableRoom.AddRange(houseData.AvailableRooms);
       GenerateHouse();
       SetRoomPos();
     }
