@@ -1,10 +1,8 @@
-using System;
 using System.Collections.Generic;
 using Cards;
 using Character;
 using Location;
 using Rooms;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 

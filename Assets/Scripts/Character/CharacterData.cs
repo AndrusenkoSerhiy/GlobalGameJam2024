@@ -9,5 +9,6 @@ namespace Character{
     public int MinMood;
     public List<Tag> PreferedTags = new();
     public List<Tag> HatedTags = new();
+    public Actor Actor;
   }
 }

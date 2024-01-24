@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Rooms{
@@ -10,5 +11,8 @@ namespace Rooms{
       get => _roomIndex;
       set => _roomIndex = value;
     }
+
+    public List<Transform> SpawnPoints = new();
+    
   }
 }

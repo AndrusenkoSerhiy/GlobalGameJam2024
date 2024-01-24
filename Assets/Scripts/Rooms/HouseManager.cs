@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Character;
 using Location;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -11,9 +12,13 @@ namespace Rooms{
     
     private List<Room> _availableRoom = new();
     private int _houseRooms;
+
+    private List<Actor> _actors = new();
     
     public void Init(LocationData locData){
       //ClearPrevious
+      _actors.ForEach(e=>Destroy(e.gameObject));
+      _actors.Clear();
       _curHouse.ForEach(r=>Destroy(r.gameObject));
       _curHouse.Clear();
       _curRoom = null;
@@ -26,6 +31,7 @@ namespace Rooms{
       _availableRoom.AddRange(houseData.AvailableRooms);
       GenerateHouse();
       SetRoomPos();
+      SpawnActors();
     }
 
     private void GenerateHouse(){
@@ -68,6 +74,19 @@ namespace Rooms{
       var newIndex = _curRoom.RoomIndex + direction;
       SetCurRoom(newIndex);
       SetRoomPos();
+    }
+
+    private void SpawnActors(){
+      List<Transform> spawnPoint = new();
+      foreach (var room in _curHouse){
+        spawnPoint.AddRange(room.SpawnPoints);
+      }
+      
+      var i = 0;
+      foreach (var charData in GameManager.GameManager.Instance.CharactersInLocation){
+        _actors.Add(Instantiate(charData.Actor, spawnPoint[i].position, Quaternion.identity, parent:spawnPoint[i].parent));
+        i++;
+      }
     }
   }
 }
