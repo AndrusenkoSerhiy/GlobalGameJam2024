@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using Cards;
 using Character;
 using Location;
+using Rooms;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace GameManager{
   public class GameManager : MonoBehaviour{
@@ -13,6 +13,9 @@ namespace GameManager{
     
     public List<Actor> ActorsInScene = new();
 
+    public HouseManager HouseManager;
+    public List<LocationData> HouseDatas = new(); 
+
     private void Awake(){
       if (Instance){
         Destroy(gameObject);
@@ -21,8 +24,12 @@ namespace GameManager{
 
       Instance = this;
       DontDestroyOnLoad(gameObject);
+      InitHouseManager();
     }
 
+    public void InitHouseManager(){
+      HouseManager.Init();
+    }
     public void InitActors(){
       ActorsInScene.ForEach(c=>c.Init());
     }

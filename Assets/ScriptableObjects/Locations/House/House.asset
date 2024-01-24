@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 013623e57843416bba798e4bf5fa0b4e, type: 3}
   m_Name: House
   m_EditorClassIdentifier: 
+  TimeForCompletion: 100
   CardsPool: {fileID: 11400000, guid: e7067c0596595bd4589409a2cf76fded, type: 2}
   CharactersPool: {fileID: 11400000, guid: 81d49e062159efe4384d9cec1f7135b4, type: 2}
+  HouseRooms: 2
+  AvailableRooms:
+  - {fileID: 610359895190484661, guid: 6ff387c848ab9e44f8f00aefaa120bee, type: 3}
+  - {fileID: 610359895190484661, guid: 7ff0446fdd12706448879ee3047d2ca5, type: 3}

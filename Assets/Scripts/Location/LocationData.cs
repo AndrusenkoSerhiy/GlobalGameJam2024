@@ -1,5 +1,7 @@
+using System.Collections.Generic;
 using Cards;
 using Character;
+using Rooms;
 using UnityEngine;
 
 namespace Location{
@@ -8,5 +10,7 @@ namespace Location{
     public float TimeForCompletion = 100f;
     public CardsPool CardsPool;
     public CharactersPool CharactersPool;
+    public int HouseRooms = 0;
+    public List<Room> AvailableRooms = new();
   }
 }
