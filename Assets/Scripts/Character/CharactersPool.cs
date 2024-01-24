@@ -24,7 +24,6 @@ namespace Character{
       }
 
       allChars = allChars.OrderBy(r => Random.value).ToList();
-      Debug.Log(allChars.Count);
       return allChars.GetRange(0, count);
     }
   }

@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5773cbe0e77046928867019bdbd50f57, type: 3}
   m_Name: SimpleDarkHumor
   m_EditorClassIdentifier: 
+  NameText: Dark Joke
   TagsList:
   - {fileID: 11400000, guid: f7678832178b23d47a6b8c7a16c3c1f2, type: 2}
+  FaceSprite: {fileID: 0}

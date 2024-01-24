@@ -36,6 +36,7 @@ namespace Cards{
 
         var nextCard = CurrentCardsPool[i];
         CurrentHandsPool.Add(nextCard);
+        CardsMonitorUI.AddCard(nextCard);
         CurrentCardsPool.Remove(nextCard);
       }
     }

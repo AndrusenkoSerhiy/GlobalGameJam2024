@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5773cbe0e77046928867019bdbd50f57, type: 3}
   m_Name: SimpleFamilyHumor
   m_EditorClassIdentifier: 
+  NameText: Dad's Joke
   TagsList:
   - {fileID: 11400000, guid: 5c4327742c0b22a43979b6d3da83b4c3, type: 2}
+  FaceSprite: {fileID: 0}

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cards;
 using Character;
 using Location;
 using UnityEngine;
@@ -87,6 +88,10 @@ namespace Rooms{
         _actors.Add(Instantiate(charData.Actor, spawnPoint[i].position, Quaternion.identity, parent:spawnPoint[i].parent));
         i++;
       }
+    }
+
+    public void PlayCard(CardData cardData) {
+      
     }
   }
 }

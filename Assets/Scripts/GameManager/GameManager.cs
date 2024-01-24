@@ -65,6 +65,8 @@ namespace GameManager{
     }
 
     public void PlayCard(CardData cardData){
+      HouseManager.PlayCard(cardData);
+      CardsManager.GetCardsToHand(1);
       //ActorsInScene.ForEach(c=>c.CheckTags(cardData.TagsList));
     }
   }

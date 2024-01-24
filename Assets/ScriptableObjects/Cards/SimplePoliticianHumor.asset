@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5773cbe0e77046928867019bdbd50f57, type: 3}
   m_Name: SimplePoliticianHumor
   m_EditorClassIdentifier: 
+  NameText: Politician Joke
   TagsList:
   - {fileID: 11400000, guid: 0bd2c16bd1f276944a887c9db2382d62, type: 2}
+  FaceSprite: {fileID: 0}
