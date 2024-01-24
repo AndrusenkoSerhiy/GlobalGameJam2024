@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: House
   m_EditorClassIdentifier: 
   TimeForCompletion: 100
+  SessionCardsMaxCount: 9
+  SessionCharsMaxCount: 6
   CardsPool: {fileID: 11400000, guid: e7067c0596595bd4589409a2cf76fded, type: 2}
   CharactersPool: {fileID: 11400000, guid: 81d49e062159efe4384d9cec1f7135b4, type: 2}
   HouseRooms: 2

@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Office
   m_EditorClassIdentifier: 
   TimeForCompletion: 100
+  SessionCardsMaxCount: 9
+  SessionCharsMaxCount: 6
   CardsPool: {fileID: 11400000, guid: de733a5220b082342a9b6b84b2e18fa4, type: 2}
   CharactersPool: {fileID: 11400000, guid: 5501d5beb174a6a46bb579bfa65c890a, type: 2}
   HouseRooms: 2

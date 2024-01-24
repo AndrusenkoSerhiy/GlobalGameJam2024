@@ -4,6 +4,7 @@ using Cards;
 using Character;
 using Location;
 using Rooms;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -13,12 +14,12 @@ namespace GameManager{
     [Header("Current location info")]
     private int CurLocationIndex = 0;
     public LocationData CurrentLocationData;
-    
-    public List<Actor> ActorsInScene = new();
+    public List<CharacterData> CharactersInLocation = new();
+    public List<CardData> CardsInLocation = new();
 
     [Header("Components")]
-    public CardsMonitorUI CardsMonitorUI;
     public HouseManager HouseManager;
+    public CardsManager CardsManager;
     
     [Header("Pools")]
     public List<LocationData> LocationsPool = new();
@@ -42,34 +43,31 @@ namespace GameManager{
 
     public void Reset(bool init = false){
       //ClearOld
-      ActorsInScene.ForEach(c=>Destroy(c.gameObject));
-      ActorsInScene.Clear();
+      CardsInLocation.Clear();
+      CharactersInLocation.Clear();
+      
       
       //Generate new
       int curIndex = init ? 0 : CurLocationIndex + 1;
       if (curIndex >= LocationsPool.Count) curIndex = Random.Range(0, LocationsPool.Count-1);
       CurLocationIndex = curIndex;
       CurrentLocationData = LocationsPool[CurLocationIndex];
+      CardsInLocation = CurrentLocationData.CardsPool.GetRandomCards(CurrentLocationData.SessionCardsMaxCount);
+      CharactersInLocation = CurrentLocationData.CharactersPool.GetRandomChars(CurrentLocationData.SessionCharsMaxCount);
       InitHouseManager(CurrentLocationData);
-      InitCardsMonitor(CurrentLocationData);
+      InitCardsManager();
     }
 
     public void InitHouseManager(LocationData locationData){
       HouseManager.Init(locationData);
     }
 
-    public void InitCardsMonitor(LocationData locationData){
-      
-    }
-    public void InitActors(){
-      //Spawn
-      //codeSpawn
-      //Init
-      ActorsInScene.ForEach(c=>c.Init());
+    public void InitCardsManager(){
+      CardsManager.Init(CardsInLocation);
     }
 
     public void PlayCard(CardData cardData){
-      ActorsInScene.ForEach(c=>c.CheckTags(cardData.TagsList));
+      //ActorsInScene.ForEach(c=>c.CheckTags(cardData.TagsList));
     }
   }
 }

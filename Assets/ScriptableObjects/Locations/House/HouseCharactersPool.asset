@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllCharacters:
   - CardData: {fileID: 11400000, guid: a1e314edac222854ebe472a967097a80, type: 2}
-    Count: 4
+    Count: 6

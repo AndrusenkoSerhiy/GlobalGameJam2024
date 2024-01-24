@@ -285,53 +285,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &838639537
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 838639539}
-  - component: {fileID: 838639538}
-  m_Layer: 0
-  m_Name: HouseManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &838639538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838639537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a11fc3d93814e68973a094b8a98bdd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _curHouse: []
-  _curRoom: {fileID: 0}
-  _prevRoom: {fileID: 0}
---- !u!4 &838639539
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838639537}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.40694237, y: -4.0385704, z: -8.006895}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,6 +493,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1242875256655323601, guid: 59b826a4a23ca8e449e79af40f875afe, type: 3}
+      propertyPath: CardsMonitorUI
+      value: 
+      objectReference: {fileID: 1035314793}
     - target: {fileID: 3875497220589466908, guid: 59b826a4a23ca8e449e79af40f875afe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -580,14 +537,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7385037541107818064, guid: 59b826a4a23ca8e449e79af40f875afe, type: 3}
-      propertyPath: HouseManager
-      value: 
-      objectReference: {fileID: 838639538}
-    - target: {fileID: 7385037541107818064, guid: 59b826a4a23ca8e449e79af40f875afe, type: 3}
-      propertyPath: CardsMonitorUI
-      value: 
-      objectReference: {fileID: 1035314793}
     - target: {fileID: 8811475813203151234, guid: 59b826a4a23ca8e449e79af40f875afe, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -664,4 +613,3 @@ SceneRoots:
   - {fileID: 8175991656652642302}
   - {fileID: 1394500030}
   - {fileID: 580459273}
-  - {fileID: 838639539}
