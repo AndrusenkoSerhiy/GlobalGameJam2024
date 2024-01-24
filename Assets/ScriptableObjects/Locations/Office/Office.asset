@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 013623e57843416bba798e4bf5fa0b4e, type: 3}
+  m_Name: Office
+  m_EditorClassIdentifier: 
+  TimeForCompletion: 100
+  SessionCardsMaxCount: 9
+  SessionCharsMaxCount: 6
+  CardsPool: {fileID: 11400000, guid: de733a5220b082342a9b6b84b2e18fa4, type: 2}
+  CharactersPool: {fileID: 11400000, guid: 5501d5beb174a6a46bb579bfa65c890a, type: 2}
+  HouseRooms: 2
+  AvailableRooms:
+  - {fileID: 610359895190484661, guid: 6ff387c848ab9e44f8f00aefaa120bee, type: 3}
+  - {fileID: 610359895190484661, guid: 7ff0446fdd12706448879ee3047d2ca5, type: 3}

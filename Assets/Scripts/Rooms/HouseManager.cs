@@ -1,27 +1,39 @@
 using System.Collections.Generic;
+using Location;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace Rooms{
   public class HouseManager : MonoBehaviour{
-    [SerializeField] private List<Room> _allRooms = new();
     [SerializeField] private List<Room> _curHouse = new();
-    [SerializeField] private int _houseRooms;
     [SerializeField] private Room _curRoom;
     [SerializeField] private Room _prevRoom;
+    
     private List<Room> _availableRoom = new();
-    private void Awake(){
-      _availableRoom = _allRooms;
+    private int _houseRooms;
+    
+    public void Init(LocationData locData){
+      //ClearPrevious
+      _curHouse.ForEach(r=>Destroy(r.gameObject));
+      _curHouse.Clear();
+      _curRoom = null;
+      _prevRoom = null;
+      _availableRoom.Clear();
+      
+      //Init new
+      var houseData = locData;
+      _houseRooms = houseData.HouseRooms;
+      _availableRoom.AddRange(houseData.AvailableRooms);
       GenerateHouse();
       SetRoomPos();
     }
 
     private void GenerateHouse(){
       for (int i = 0; i < _houseRooms; i++){
-        _curHouse.Add(GetRandomRoom());
-      }
-      for (int i = 0; i < _curHouse.Count; i++){
-        _curHouse[i].RoomIndex = i;
+        var rndRoom = GetRandomRoom();
+        var room = Instantiate(rndRoom, new Vector3(0, -10, 0), Quaternion.identity);
+        room.RoomIndex = i;
+        _curHouse.Add(room);
       }
       SetCurRoom(0);
     }

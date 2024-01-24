@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3875497220589466908}
   - component: {fileID: 7385037541107818064}
+  - component: {fileID: 1242875256655323601}
+  - component: {fileID: 1112990251861878409}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -44,4 +46,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a444b310d9a54a9889c46c0a7d77d8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charactersInScene: []
+  CurrentLocationData: {fileID: 0}
+  CharactersInLocation: []
+  CardsInLocation: []
+  HouseManager: {fileID: 1112990251861878409}
+  CardsManager: {fileID: 1242875256655323601}
+  LocationsPool:
+  - {fileID: 11400000, guid: c32dce37f9501f34b839e891a9bf50b0, type: 2}
+  - {fileID: 11400000, guid: 7405a49ca7b67a545b4ac44c6f5fdeb6, type: 2}
+--- !u!114 &1242875256655323601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8811475813203151234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab4b0a648b440ceabd2dea352cb0f7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHandSize: 5
+  StartHandSize: 3
+  InitialCardsPool: []
+  CurrentCardsPool: []
+  CurrentHandsPool: []
+  CardsMonitorUI: {fileID: 0}
+--- !u!114 &1112990251861878409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8811475813203151234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a11fc3d93814e68973a094b8a98bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _curHouse: []
+  _curRoom: {fileID: 0}
+  _prevRoom: {fileID: 0}

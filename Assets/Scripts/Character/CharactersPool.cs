@@ -15,7 +15,7 @@ namespace Character{
   public class CharactersPool : ScriptableObject{
     public List<CharacterPoolElement> AllCharacters = new();
 
-    public List<CharacterData> GetRandomCards(int count){
+    public List<CharacterData> GetRandomChars(int count){
       List<CharacterData> allChars = new();
       foreach (var charElem in AllCharacters){
         for (int i = 0; i < charElem.Count; i++){
@@ -24,6 +24,7 @@ namespace Character{
       }
 
       allChars = allChars.OrderBy(r => Random.value).ToList();
+      Debug.Log(allChars.Count);
       return allChars.GetRange(0, count);
     }
   }
