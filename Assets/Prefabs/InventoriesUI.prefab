@@ -78,9 +78,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cellSize: {x: 40, y: 40}
-  _cellSpriteEmpty: {fileID: 21300012, guid: 4f666dd4618814d2f8c5a2599cd224c7, type: 3}
-  _cellSpriteSelected: {fileID: 21300014, guid: 4f666dd4618814d2f8c5a2599cd224c7, type: 3}
-  _cellSpriteBlocked: {fileID: 21300016, guid: 4f666dd4618814d2f8c5a2599cd224c7, type: 3}
+  _cellSpriteEmpty: {fileID: 21300000, guid: e3766be675a6ba247b8d2b1cfcc35e2a, type: 3}
+  _cellSpriteSelected: {fileID: 21300000, guid: f4a442f70ebf2db47ab1fdb12b97ff84, type: 3}
+  _cellSpriteBlocked: {fileID: 21300000, guid: bed991c9efaf0ec4981bbc5f31362924, type: 3}
 --- !u!114 &114577331040188778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -763,9 +763,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cellSize: {x: 40, y: 40}
-  _cellSpriteEmpty: {fileID: 21300012, guid: 4f666dd4618814d2f8c5a2599cd224c7, type: 3}
-  _cellSpriteSelected: {fileID: 21300014, guid: 4f666dd4618814d2f8c5a2599cd224c7, type: 3}
-  _cellSpriteBlocked: {fileID: 21300016, guid: 4f666dd4618814d2f8c5a2599cd224c7, type: 3}
+  _cellSpriteEmpty: {fileID: 21300000, guid: e3766be675a6ba247b8d2b1cfcc35e2a, type: 3}
+  _cellSpriteSelected: {fileID: 21300000, guid: f4a442f70ebf2db47ab1fdb12b97ff84, type: 3}
+  _cellSpriteBlocked: {fileID: 21300000, guid: bed991c9efaf0ec4981bbc5f31362924, type: 3}
 --- !u!114 &2537809336066481448
 MonoBehaviour:
   m_ObjectHideFlags: 0
