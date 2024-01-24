@@ -1,7 +1,7 @@
-using System;
 using System.Collections.Generic;
+using FarrokhGames.Inventory;
 
-namespace FarrokhGames.Inventory.Examples
+namespace Inventory.Inventory
 {
     public class InventoryProvider : IInventoryProvider
     {

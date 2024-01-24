@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using FarrokhGames.Inventory;
+using UnityEngine;
 
-namespace FarrokhGames.Inventory.Examples
+namespace Inventory.Inventory
 {
     /// <summary>
     /// Example Lobby class

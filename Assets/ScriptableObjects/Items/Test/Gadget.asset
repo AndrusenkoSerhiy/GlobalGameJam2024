@@ -18,5 +18,4 @@ MonoBehaviour:
     _height: 2
     _shape: 0101
   _type: 2
-  _canDrop: 0
   _position: {x: 0, y: 0}

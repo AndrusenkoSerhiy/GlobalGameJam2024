@@ -73,9 +73,17 @@ namespace FarrokhGames.Inventory
             _image.raycastTarget = false;
             _image.transform.SetParent(_canvas.transform);
             _image.transform.SetAsLastSibling();
-            _image.transform.localScale = Vector3.one;
             _image.sprite = item.sprite;
             _image.SetNativeSize();
+            
+            var aspectRatio = _image.rectTransform.sizeDelta.x / _image.rectTransform.sizeDelta.y;
+            var targetAspectRatio = item.width / (float)item.height;
+            
+            var scale = (aspectRatio > targetAspectRatio) 
+                ? item.width * originalController.inventoryRenderer.cellSize.x / _image.rectTransform.sizeDelta.x 
+                : item.height * originalController.inventoryRenderer.cellSize.y / _image.rectTransform.sizeDelta.y;
+
+            _image.transform.localScale = new Vector3(scale, scale, 1);
         }
 
         /// <summary>

@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using FarrokhGames.Inventory;
+using UnityEngine;
 using UnityEngine.UI;
 
-namespace FarrokhGames.Inventory.Examples
+namespace Inventory.Inventory
 {
     public class InventorySelection : MonoBehaviour
     {
