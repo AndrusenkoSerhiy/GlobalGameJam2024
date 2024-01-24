@@ -38,7 +38,6 @@ namespace UI {
       DOTween.Kill(tween);
       Canvas.sortingOrder = 0;
       tween = transform.DOScale(new Vector3(1f, 1f, 1f), 0.2f).SetEase(Ease.Linear);
-      Debug.Log("DeScale anim");
     }
   }
 }
