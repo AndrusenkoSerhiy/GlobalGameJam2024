@@ -19,3 +19,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0bd2c16bd1f276944a887c9db2382d62, type: 2}
   HatedTags:
   - {fileID: 11400000, guid: f7678832178b23d47a6b8c7a16c3c1f2, type: 2}
+  Actor: {fileID: 4284369397984253704, guid: 807989aad74bbe84dba758a735250d37, type: 3}

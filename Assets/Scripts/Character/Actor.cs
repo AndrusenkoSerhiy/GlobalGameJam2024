@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using Tags;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Character{
   public class Actor : MonoBehaviour{
