@@ -16,6 +16,7 @@ namespace UI{
     public Canvas Canvas;
     public GraphicRaycaster GraphicRaycaster;
     public GameObject Explosion;
+    public GameObject Poison;
     private Tweener tween;
 
     public void Init(CardData cardData){
@@ -61,6 +62,7 @@ namespace UI{
     }
 
     public void PlayMismatchAnimation(){
+      Poison.SetActive(true);
       //x
       float x = RectTransform.anchoredPosition.x;
       var endX = x;
