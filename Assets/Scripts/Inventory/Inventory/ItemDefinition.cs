@@ -1,4 +1,6 @@
-﻿using FarrokhGames.Inventory;
+﻿using System.Collections.Generic;
+using FarrokhGames.Inventory;
+using Tags;
 using UnityEngine;
 
 namespace Inventory.Inventory
@@ -15,13 +17,13 @@ namespace Inventory.Inventory
         [Header("Data")] 
         [SerializeField] private int _price = 0;
         
-        [SerializeField] private ItemType _type = ItemType.Utility;
+        [SerializeField] private List<Tag> _tags = new();
         
         [SerializeField, HideInInspector] private Vector2Int _position = Vector2Int.zero;
         
         public string Name => _name;
         
-        public ItemType Type => _type;
+        public List<Tag> Tags => _tags;
         
         public Sprite sprite => _sprite;
 

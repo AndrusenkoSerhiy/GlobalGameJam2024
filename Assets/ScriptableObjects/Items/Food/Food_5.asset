@@ -19,5 +19,7 @@ MonoBehaviour:
     _height: 2
     _shape: 010101010101
   _price: 30
-  _type: 2
+  _tags:
+  - {fileID: 11400000, guid: 89f453591ba0921469b812e67accf68e, type: 2}
+  - {fileID: 11400000, guid: 870bb3ac007085e458815a6e9d62205b, type: 2}
   _position: {x: 0, y: 0}
