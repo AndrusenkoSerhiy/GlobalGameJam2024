@@ -66,8 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab4b0a648b440ceabd2dea352cb0f7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHandSize: 5
-  StartHandSize: 3
+  HandSize: 5
   InitialCardsPool: []
   CurrentCardsPool: []
   CurrentHandsPool: []
