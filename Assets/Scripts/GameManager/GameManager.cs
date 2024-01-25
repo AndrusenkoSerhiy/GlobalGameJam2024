@@ -4,6 +4,7 @@ using Character;
 using Location;
 using Rooms;
 using UnityEngine;
+using Uobjects;
 using Random = UnityEngine.Random;
 
 namespace GameManager{
@@ -18,6 +19,7 @@ namespace GameManager{
     [Header("Components")]
     public HouseManager HouseManager;
     public CardsManager CardsManager;
+    public UobjectsManager UobjectsManager;
     
     [Header("Pools")]
     public List<LocationData> LocationsPool = new();
@@ -54,6 +56,7 @@ namespace GameManager{
       CharactersInLocation = CurrentLocationData.CharactersPool.GetRandomChars(CurrentLocationData.SessionCharsMaxCount);
       InitHouseManager(CurrentLocationData);
       InitCardsManager();
+      InitUobjectsManager();
     }
 
     public void InitHouseManager(LocationData locationData){
@@ -64,10 +67,15 @@ namespace GameManager{
       CardsManager.Init(CardsInLocation);
     }
 
+    public void InitUobjectsManager(){
+      //UobjectsManager.Init();
+    }
+
     public bool PlayCard(CardData cardData){
       CardsManager.RemoveFromHand(cardData);
       CardsManager.GetCardsToHand(1);
-      return HouseManager.PlayCard(cardData);;
+      //ActorsInScene.ForEach(c=>c.CheckTags(cardData.TagsList));
+      return HouseManager.PlayCard(cardData);
     }
   }
 }

@@ -24,8 +24,7 @@ namespace Rooms{
       //_actors.ForEach(e=>Destroy(e.gameObject));
       _actors.Clear();
       foreach (var room in _curHouse){
-        room.ActorsInRoom.ForEach(e=>Destroy(e.gameObject));
-        room.ActorsInRoom.Clear();
+        room.Clear();
       }
       _curHouse.ForEach(r=>Destroy(r.gameObject));
       _curHouse.Clear();
@@ -45,9 +44,10 @@ namespace Rooms{
     private void GenerateHouse(){
       for (int i = 0; i < _houseRooms; i++){
         var rndRoom = GetRandomRoom();
-        var room = Instantiate(rndRoom, new Vector3(0, -10, 0), Quaternion.identity);
+        var room = Instantiate(rndRoom, new Vector3(0, -40, 0), Quaternion.identity);
         room.RoomIndex = i;
         _curHouse.Add(room);
+        room.InitJoints();
       }
       SetCurRoom(0);
     }
@@ -61,7 +61,7 @@ namespace Rooms{
 
     private void SetRoomPos(){
       _curRoom.transform.position = new Vector3(0,0,-10);
-      if (_prevRoom != null) _prevRoom.transform.position = new Vector3(0,-10,-10);
+      if (_prevRoom != null) _prevRoom.transform.position = new Vector3(0,-40,-40);
     }
 
     private void SetCurRoom(int index){
