@@ -5,16 +5,18 @@ using UnityEngine.UI;
 using Uobjects;
 
 namespace UI{
-  public class UIFollowObject : MonoBehaviour, IPointerEnterHandler,IPointerExitHandler, IPointerDownHandler, IPointerUpHandler{
+  public class UobjUI : MonoBehaviour, IPointerEnterHandler,IPointerExitHandler, IPointerDownHandler, IPointerUpHandler{
     
     public Uobject target;  // Reference to the 3D object
     public Image uiImage;
     public Image uiImageTest;
     [SerializeField] private Vector3 _offset;
     private Tweener tween;
-    
-    private void Awake(){
-      target.GetComponent<Uobject>().SetImage(uiImageTest);
+
+    public void Init(Uobject uobj){
+      target = uobj;
+      target.SetImage(uiImageTest);
+      
     }
     void Update()
     {
@@ -26,10 +28,6 @@ namespace UI{
         // Set the UI image's position to the converted screen space position
         uiImage.transform.position = targetPosition;
       }
-    }
-    
-    public void OnPointerClick(PointerEventData eventData){
-      Debug.LogError("click");
     }
 
     public void OnPointerEnter(PointerEventData eventData){
@@ -43,7 +41,7 @@ namespace UI{
     }
 
     public void OnPointerDown(PointerEventData eventData){
-      if (target == null || target.isInteracting || target.isOpened) return;
+      if (target == null) return;
       
       target.StartInteraction();
     }
