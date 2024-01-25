@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Data;
 using Cards;
 using Character;
 using Location;
@@ -92,7 +93,10 @@ namespace Rooms{
       var i = 0;
       //create actor ant set in position
       foreach (var charData in GameManager.GameManager.Instance.CharactersInLocation){
-        _actors.Add(Instantiate(charData.Actor, spawnPoint[i].position, Quaternion.identity, parent:spawnPoint[i].parent));
+        var actor = Instantiate(charData.Actor, spawnPoint[i].position, Quaternion.identity,
+          parent: spawnPoint[i].parent);
+        actor.Init(charData);
+        _actors.Add(actor);
         i++;
       }
       //add actor to room list
@@ -103,8 +107,16 @@ namespace Rooms{
       
     }
 
-    public void PlayCard(CardData cardData) {
-      
+    public bool PlayCard(CardData cardData){
+      int positive = 0;
+      int negative = 0;
+      foreach (var actor in _curRoom.ActorsInRoom){
+        var result = actor.CheckTags(cardData.TagsList);
+        if (result) positive++;
+        else negative++;
+      }
+
+      return positive >= negative;
     }
   }
 }

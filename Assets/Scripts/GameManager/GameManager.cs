@@ -64,11 +64,10 @@ namespace GameManager{
       CardsManager.Init(CardsInLocation);
     }
 
-    public void PlayCard(CardData cardData){
-      HouseManager.PlayCard(cardData);
+    public bool PlayCard(CardData cardData){
       CardsManager.RemoveFromHand(cardData);
       CardsManager.GetCardsToHand(1);
-      //ActorsInScene.ForEach(c=>c.CheckTags(cardData.TagsList));
+      return HouseManager.PlayCard(cardData);;
     }
   }
 }

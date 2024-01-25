@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48577cd50e931c94fb7b6908a17ac032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterData: {fileID: 0}
+  characterData: {fileID: 11400000, guid: a1e314edac222854ebe472a967097a80, type: 2}
   randMood: 0
   CurMood: 0
 --- !u!1 &5179413257150709618

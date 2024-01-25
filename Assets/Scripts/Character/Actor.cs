@@ -10,20 +10,22 @@ namespace Character{
     [SerializeField] private bool randMood;
     [SerializeField] public int CurMood;
 
-    public void Init(){
+    public void Init(CharacterData charData){
+      characterData = charData;
       CurMood = randMood ? Random.Range(characterData.MinMood, characterData.MaxMood) : 0;
       ChangeAnimation();
     }
 
-    public void CheckTags(List<Tag> targetTags){
+    public bool CheckTags(List<Tag> targetTags){
       int matched = 0;
       int dismatched = 0;
       foreach (var tag in targetTags){
         if (characterData.PreferedTags.Contains(tag)) matched++;
         if (characterData.HatedTags.Contains(tag)) dismatched++;
       }
-
+      
       ChangeMood(matched - dismatched);
+      return matched > dismatched;
     }
 
     public void ChangeMood(int count){

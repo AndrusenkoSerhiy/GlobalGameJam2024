@@ -8,7 +8,8 @@ using UnityEngine.UI;
 namespace UI{
   public class CardUI : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler{
     public CardData CardData;
-
+    public bool IsPlaying;
+    public bool CanBePlayed = true;
     [Header("Components")] public RectTransform RectTransform;
     public Image FaceImage;
     public TMP_Text TextLabel;
@@ -20,18 +21,25 @@ namespace UI{
       CardData = cardData;
       FaceImage.sprite = cardData.FaceSprite;
       TextLabel.text = cardData.NameText;
+    }
+
+    public void SetSortingOn(){
       Canvas.overrideSorting = true;
       Canvas.sortingOrder = 0;
     }
 
-    public void OnPointerClick(PointerEventData eventData){
-      transform.SetParent(transform.parent.parent);
-      GraphicRaycaster.enabled = false;
+    public void SetCustomSorting(){
       Canvas.overrideSorting = true;
       Canvas.sortingOrder = 5;
+    }
+
+    public void OnPointerClick(PointerEventData eventData){
+      if (!CanBePlayed) return;
+      IsPlaying = true;
+      transform.SetParent(transform.parent.parent);
+      GraphicRaycaster.enabled = false;
+      SetCustomSorting();
       PlayCardAnim();
-      //GameManager.GameManager.Instance.PlayCard(CardData);
-      //Destroy(gameObject);
     }
 
     public void PlayCardAnim(){
@@ -46,8 +54,8 @@ namespace UI{
     }
 
     void CheckResult(){
-      var rand = Random.Range(0, 2);
-      if(rand == 0) PlayMatchAnimation();
+      bool result = GameManager.GameManager.Instance.PlayCard(CardData);
+      if (result) PlayMatchAnimation();
       else PlayMismatchAnimation();
     }
 
@@ -87,17 +95,15 @@ namespace UI{
       seq.Play().OnComplete(() => Destroy(gameObject));
     }
 
-    public void Clear(){
-      Destroy(gameObject);
-    }
-
     public void OnPointerEnter(PointerEventData eventData){
+      if (!CanBePlayed) return;
       DOTween.Kill(tween);
       Canvas.sortingOrder = 1;
       tween = transform.DOScale(new Vector3(1.2f, 1.2f, 1f), 0.2f).SetEase(Ease.OutBack);
     }
 
     public void OnPointerExit(PointerEventData eventData){
+      if (!CanBePlayed) return;
       DOTween.Kill(tween);
       Canvas.sortingOrder = 0;
       tween = transform.DOScale(new Vector3(1f, 1f, 1f), 0.2f).SetEase(Ease.Linear);
