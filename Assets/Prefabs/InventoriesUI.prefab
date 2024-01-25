@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224528672208050248}
-  - component: {fileID: 114782670811109416}
+  - component: {fileID: 8162090976701187883}
   - component: {fileID: 114425895515657302}
   - component: {fileID: 114577331040188778}
   m_Layer: 5
@@ -39,7 +39,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 640}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &114782670811109416
+--- !u!114 &8162090976701187883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,15 +48,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1082305083246276}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cf862b43efc1409fa7d9796bfdd0f84, type: 3}
+  m_Script: {fileID: 11500000, guid: bf4030b844bdefe45a8a57a21803218c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _renderMode: 0
-  _maximumAlowedItemCount: -1
   _width: 6
-  _height: 8
-  _definitions: []
-  _fillRandomly: 0
+  _height: 7
+  _itemManager: {fileID: 11400000, guid: 1dd9986176d32e340a356ace0a6de6e0, type: 2}
+  _lootPreset: {fileID: 0}
 --- !u!114 &114425895515657302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,7 +684,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1919124042662507149}
-  - component: {fileID: 1623155556268951602}
+  - component: {fileID: 6179492584556379641}
   - component: {fileID: 6952879898453596918}
   - component: {fileID: 2537809336066481448}
   m_Layer: 5
@@ -716,7 +714,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 320, y: 320}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1623155556268951602
+--- !u!114 &6179492584556379641
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -725,15 +723,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7493276312931344181}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cf862b43efc1409fa7d9796bfdd0f84, type: 3}
+  m_Script: {fileID: 11500000, guid: bf4030b844bdefe45a8a57a21803218c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _renderMode: 0
-  _maximumAlowedItemCount: -1
   _width: 6
-  _height: 6
-  _definitions: []
-  _fillRandomly: 0
+  _height: 7
+  _itemManager: {fileID: 11400000, guid: 1dd9986176d32e340a356ace0a6de6e0, type: 2}
+  _lootPreset: {fileID: 11400000, guid: 15d53c249059b5a48beafa55cc64e544, type: 2}
 --- !u!114 &6952879898453596918
 MonoBehaviour:
   m_ObjectHideFlags: 0

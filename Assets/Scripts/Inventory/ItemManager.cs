@@ -10,7 +10,13 @@ namespace Inventory
     {
         public List<ItemDefinition> Items;
         
-        public List<ItemDefinition> GetWithTag(Tag tag)
+        public ItemDefinition GetRandomItemWithTag(Tag tag)
+        {
+            var list = GetItemsWithTag(tag);
+            return list[Random.Range(0, list.Count)];
+        }
+        
+        public List<ItemDefinition> GetItemsWithTag(Tag tag)
         {
             var result = new List<ItemDefinition>();
             

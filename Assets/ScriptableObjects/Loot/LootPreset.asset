@@ -12,4 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52261a692d45a584fb6bb1f6652f0b7f, type: 3}
   m_Name: LootPreset
   m_EditorClassIdentifier: 
-  Capacity: 0
+  capacity: 3
+  variants:
+  - tag: {fileID: 11400000, guid: ccbc24af5f546b84490472b95122c0cd, type: 2}
+    probability: 75
+  - tag: {fileID: 11400000, guid: 8383971a633abbd42bde81303600aa5e, type: 2}
+    probability: 35
+  - tag: {fileID: 11400000, guid: 89f453591ba0921469b812e67accf68e, type: 2}
+    probability: 15
