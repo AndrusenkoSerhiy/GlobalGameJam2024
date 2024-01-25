@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66aef478738eb954b98407c9567e69cb, type: 3}
+  m_Name: Theme
+  m_EditorClassIdentifier: 
+  id: Theme
+  type: 2
+  volume: 0
+  volumeDelta: 0
+  pitch: 0
+  pitchDelta: 0
+  cooldown: 150
+  maxClipCount: 0
+  stealing: 0
+  priority: 125
+  followTarget: 0
+  useSpatializer: 0
+  spatializer: {fileID: 0}
+  mixedGroupRef: {fileID: 4752365173948270563, guid: 5e3154ebcd608814fb0fa7ceb121109e, type: 2}
+  ignoreTimeScale: 0
+  clipRefList:
+  - {fileID: 8300000, guid: 2b5e12b916d5a134ab71a5c552558a99, type: 3}
