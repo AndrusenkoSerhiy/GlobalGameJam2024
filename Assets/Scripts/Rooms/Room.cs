@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Character;
 using UnityEngine;
 
 namespace Rooms{
@@ -13,6 +14,7 @@ namespace Rooms{
     }
 
     public List<Transform> SpawnPoints = new();
-    
+    public List<Actor> ActorsInRoom = new();
+
   }
 }

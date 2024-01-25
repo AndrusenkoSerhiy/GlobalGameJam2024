@@ -3,6 +3,7 @@ using Cards;
 using Character;
 using Location;
 using UnityEngine;
+using Uobjects;
 using Random = UnityEngine.Random;
 
 namespace Rooms{
@@ -15,11 +16,16 @@ namespace Rooms{
     private int _houseRooms;
 
     private List<Actor> _actors = new();
-    
+    private List<Uobject> _uobjects = new();
+    private LocationData _locationData;
     public void Init(LocationData locData){
       //ClearPrevious
-      _actors.ForEach(e=>Destroy(e.gameObject));
+      //_actors.ForEach(e=>Destroy(e.gameObject));
       _actors.Clear();
+      foreach (var room in _curHouse){
+        room.ActorsInRoom.ForEach(e=>Destroy(e.gameObject));
+        room.ActorsInRoom.Clear();
+      }
       _curHouse.ForEach(r=>Destroy(r.gameObject));
       _curHouse.Clear();
       _curRoom = null;
@@ -27,9 +33,9 @@ namespace Rooms{
       _availableRoom.Clear();
       
       //Init new
-      var houseData = locData;
-      _houseRooms = houseData.HouseRooms;
-      _availableRoom.AddRange(houseData.AvailableRooms);
+      _locationData = locData;
+      _houseRooms = _locationData.HouseRooms;
+      _availableRoom.AddRange(_locationData.AvailableRooms);
       GenerateHouse();
       SetRoomPos();
       SpawnActors();
@@ -84,10 +90,17 @@ namespace Rooms{
       }
       
       var i = 0;
+      //create actor ant set in position
       foreach (var charData in GameManager.GameManager.Instance.CharactersInLocation){
         _actors.Add(Instantiate(charData.Actor, spawnPoint[i].position, Quaternion.identity, parent:spawnPoint[i].parent));
         i++;
       }
+      //add actor to room list
+      foreach (var room in _curHouse){
+        room.ActorsInRoom.AddRange(_actors.GetRange(0, room.SpawnPoints.Count));
+        _actors.RemoveRange(0, room.SpawnPoints.Count);
+      }
+      
     }
 
     public void PlayCard(CardData cardData) {
