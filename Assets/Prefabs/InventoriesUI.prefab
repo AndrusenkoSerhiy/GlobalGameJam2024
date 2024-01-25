@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224528672208050248}
-  - component: {fileID: 114782670811109416}
+  - component: {fileID: 8162090976701187883}
   - component: {fileID: 114425895515657302}
   - component: {fileID: 114577331040188778}
   m_Layer: 5
@@ -39,7 +39,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 640}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &114782670811109416
+--- !u!114 &8162090976701187883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,25 +48,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1082305083246276}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cf862b43efc1409fa7d9796bfdd0f84, type: 3}
+  m_Script: {fileID: 11500000, guid: bf4030b844bdefe45a8a57a21803218c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _renderMode: 0
-  _maximumAlowedItemCount: -1
-  _allowedItem: 0
   _width: 6
-  _height: 8
-  _definitions:
-  - {fileID: 11400000, guid: a5930df40beb9dc42a744e89a0a27481, type: 2}
-  - {fileID: 11400000, guid: f22ccd94d2c8f9145af2f615addfaccb, type: 2}
-  - {fileID: 11400000, guid: 056343b50a813e1409a0d5e6548170e9, type: 2}
-  - {fileID: 11400000, guid: 7c580a43736a50f45951bb7781b07e1d, type: 2}
-  - {fileID: 11400000, guid: 5b2fc0a1d3732d74cad7d19a209d398f, type: 2}
-  - {fileID: 11400000, guid: 24d70129fba86aa42890e70717a8d450, type: 2}
-  - {fileID: 11400000, guid: bf6bc69e20d759d428258aa05337e49d, type: 2}
-  - {fileID: 11400000, guid: f251b79cefbece34d862efd3d41630c6, type: 2}
-  _fillRandomly: 1
-  _fillEmpty: 0
+  _height: 7
+  _itemManager: {fileID: 11400000, guid: 1dd9986176d32e340a356ace0a6de6e0, type: 2}
+  _lootPreset: {fileID: 0}
 --- !u!114 &114425895515657302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,7 +684,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1919124042662507149}
-  - component: {fileID: 1623155556268951602}
+  - component: {fileID: 6179492584556379641}
   - component: {fileID: 6952879898453596918}
   - component: {fileID: 2537809336066481448}
   m_Layer: 5
@@ -726,7 +714,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 320, y: 320}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1623155556268951602
+--- !u!114 &6179492584556379641
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -735,23 +723,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7493276312931344181}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cf862b43efc1409fa7d9796bfdd0f84, type: 3}
+  m_Script: {fileID: 11500000, guid: bf4030b844bdefe45a8a57a21803218c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _renderMode: 0
-  _maximumAlowedItemCount: -1
-  _allowedItem: 0
   _width: 6
-  _height: 6
-  _definitions:
-  - {fileID: 11400000, guid: 640085f25f2394070afe43c1edd4b92e, type: 2}
-  - {fileID: 11400000, guid: 1e71a40542e224abcb0957010541b8c8, type: 2}
-  - {fileID: 11400000, guid: 53fac397599b9450cb6ffc84b6990844, type: 2}
-  - {fileID: 11400000, guid: a790d8ff8de79447eba65a1c9f328eb1, type: 2}
-  - {fileID: 11400000, guid: 2103fea2b7f614248bd4e2271871cbf9, type: 2}
-  - {fileID: 11400000, guid: 57a0e4d113f3d48eeb460a17da5183e4, type: 2}
-  _fillRandomly: 0
-  _fillEmpty: 0
+  _height: 7
+  _itemManager: {fileID: 11400000, guid: 1dd9986176d32e340a356ace0a6de6e0, type: 2}
+  _lootPreset: {fileID: 11400000, guid: 15d53c249059b5a48beafa55cc64e544, type: 2}
 --- !u!114 &6952879898453596918
 MonoBehaviour:
   m_ObjectHideFlags: 0

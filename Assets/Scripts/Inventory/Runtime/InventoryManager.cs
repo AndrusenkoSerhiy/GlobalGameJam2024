@@ -196,7 +196,7 @@ namespace FarrokhGames.Inventory
         /// <inheritdoc />
         public bool CanAddAt(IInventoryItem item, Vector2Int point)
         {
-            if (!_provider.CanAddInventoryItem(item) || _provider.isInventoryFull)
+            if (_provider.isInventoryFull)
             {
                 return false;
             }
@@ -271,8 +271,7 @@ namespace FarrokhGames.Inventory
         public bool CanSwap(IInventoryItem item)
         {
             return _provider.inventoryRenderMode == InventoryRenderMode.Single &&
-                DoesItemFit(item) &&
-                _provider.CanAddInventoryItem(item);
+                DoesItemFit(item);
         }
 
         /// <inheritdoc />

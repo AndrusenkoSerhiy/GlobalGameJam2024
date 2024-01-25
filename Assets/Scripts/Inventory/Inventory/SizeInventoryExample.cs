@@ -11,16 +11,14 @@ namespace Inventory.Inventory
     {
         [SerializeField] private InventoryRenderMode _renderMode = InventoryRenderMode.Grid;
         [SerializeField] private int _maximumAlowedItemCount = -1;
-        [SerializeField] private ItemType _allowedItem = ItemType.Any;
         [SerializeField] private int _width = 8;
         [SerializeField] private int _height = 4;
         [SerializeField] private ItemDefinition[] _definitions = null;
         [SerializeField] private bool _fillRandomly = true; // Should the inventory get filled with random items?
-        [SerializeField] private bool _fillEmpty = false; // Should the inventory get completely filled?
-
+       
         void Start()
         {
-            var provider = new InventoryProvider(_renderMode, _maximumAlowedItemCount, _allowedItem);
+            var provider = new InventoryProvider(_renderMode, _maximumAlowedItemCount);
 
             // Create inventory
             var inventory = new InventoryManager(provider, _width, _height);
@@ -36,13 +34,13 @@ namespace Inventory.Inventory
             }
 
             // Fill empty slots with first (1x1) item
-            if (_fillEmpty)
-            {
-                for (var i = 0; i < _width * _height; i++)
-                {
-                    inventory.TryAdd(_definitions[0].CreateInstance());
-                }
-            }
+            // if (_fillEmpty)
+            // {
+            //     for (var i = 0; i < _width * _height; i++)
+            //     {
+            //         inventory.TryAdd(_definitions[0].CreateInstance());
+            //     }
+            // }
 
             // Sets the renderers's inventory to trigger drawing
             GetComponent<InventoryRenderer>().SetInventory(inventory, provider.inventoryRenderMode);

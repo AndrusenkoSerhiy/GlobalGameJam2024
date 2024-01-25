@@ -7,19 +7,16 @@ namespace Inventory.Inventory
     {
         private List<IInventoryItem> _items = new List<IInventoryItem>();
         private int _maximumAlowedItemCount;
-        ItemType _allowedItem;
 
         /// <summary>
         /// CTOR
         /// </summary>
         public InventoryProvider(
             InventoryRenderMode renderMode,
-            int maximumAlowedItemCount = -1,
-            ItemType allowedItem = ItemType.Any)
+            int maximumAlowedItemCount = -1)
         {
             inventoryRenderMode = renderMode;
             _maximumAlowedItemCount = maximumAlowedItemCount;
-            _allowedItem = allowedItem;
         }
 
         public int inventoryItemCount => _items.Count;
@@ -57,8 +54,7 @@ namespace Inventory.Inventory
 
         public bool CanAddInventoryItem(IInventoryItem item)
         {
-            if (_allowedItem == ItemType.Any)return true;
-            return (item as ItemDefinition).Type == _allowedItem;
+            return true;
         }
 
         public bool CanRemoveInventoryItem(IInventoryItem item)
