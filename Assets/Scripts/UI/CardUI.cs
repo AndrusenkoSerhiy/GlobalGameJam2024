@@ -1,3 +1,4 @@
+using System;
 using Cards;
 using DG.Tweening;
 using TMPro;
@@ -62,8 +63,7 @@ namespace UI{
     }
 
     public void PlayMismatchAnimation(){
-      Poison.SetActive(true);
-      //x
+      Poison.SetActive(true); //x
       float x = RectTransform.anchoredPosition.x;
       var endX = x;
       var endX_Start = x - 220f;
@@ -86,14 +86,10 @@ namespace UI{
     public void PlayMatchAnimation(){
       Explosion.SetActive(true);
       Sequence seq = DOTween.Sequence();
-      seq.Append(RectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.6f, RotateMode.FastBeyond360)).SetDelay(0.5f);
+      seq.Append(RectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.6f, RotateMode.FastBeyond360));
       seq.Append(RectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.6f, RotateMode.FastBeyond360));
       seq.Append(RectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.3f, RotateMode.FastBeyond360));
       seq.Append(RectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.3f, RotateMode.FastBeyond360));
-      seq.Append(RectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.1f, RotateMode.FastBeyond360));
-      seq.Append(RectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.1f, RotateMode.FastBeyond360));
-      seq.Append(RectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.1f, RotateMode.FastBeyond360));
-      seq.Append(RectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.1f, RotateMode.FastBeyond360));
       seq.Append(RectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.1f, RotateMode.FastBeyond360));
       seq.Append(RectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.1f, RotateMode.FastBeyond360));
       seq.Play().OnComplete(() => Destroy(gameObject));
