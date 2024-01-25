@@ -14,9 +14,11 @@ namespace Cards {
 
     public void Init(List<CardData> cardsList) {
       //Clear
+      CardsMonitorUI.Clear();
       InitialCardsPool.Clear();
       CurrentCardsPool.Clear();
       CurrentHandsPool.Clear();
+      
 
       //Init
       InitialCardsPool = new List<CardData>(cardsList);

@@ -10,8 +10,13 @@ public class CardsMonitorUI : MonoBehaviour{
     private float delay = 0f;
     private float coolDown = 1f;
     public float curCoolDown = 0f;
-    private List<CardUI> currentCards = new();
+    public List<CardUI> currentCards = new();
 
+    public void Clear(){
+        currentCards.ForEach(c=>Destroy(c.gameObject));
+        currentCards.Clear();
+    }
+    
     void Update(){
         currentCards.RemoveAll(c => c == null);
         if (delay > 0){

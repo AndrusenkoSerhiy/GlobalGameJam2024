@@ -15,6 +15,7 @@ namespace UI{
     public TMP_Text TextLabel;
     public Canvas Canvas;
     public GraphicRaycaster GraphicRaycaster;
+    public GameObject Explosion;
     private Tweener tween;
 
     public void Init(CardData cardData){
@@ -81,6 +82,7 @@ namespace UI{
     }
 
     public void PlayMatchAnimation(){
+      Explosion.SetActive(true);
       Sequence seq = DOTween.Sequence();
       seq.Append(RectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.6f, RotateMode.FastBeyond360)).SetDelay(0.5f);
       seq.Append(RectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.6f, RotateMode.FastBeyond360));
@@ -97,14 +99,14 @@ namespace UI{
 
     public void OnPointerEnter(PointerEventData eventData){
       if (!CanBePlayed) return;
-      DOTween.Kill(tween);
+      //DOTween.Kill(tween);
       Canvas.sortingOrder = 1;
       tween = transform.DOScale(new Vector3(1.2f, 1.2f, 1f), 0.2f).SetEase(Ease.OutBack);
     }
 
     public void OnPointerExit(PointerEventData eventData){
       if (!CanBePlayed) return;
-      DOTween.Kill(tween);
+      //DOTween.Kill(tween);
       Canvas.sortingOrder = 0;
       tween = transform.DOScale(new Vector3(1f, 1f, 1f), 0.2f).SetEase(Ease.Linear);
     }
