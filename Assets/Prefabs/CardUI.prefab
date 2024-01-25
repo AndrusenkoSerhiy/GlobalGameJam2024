@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CardData: {fileID: 0}
+  RectTransform: {fileID: 8128838301451166525}
   FaceImage: {fileID: 7406046383286383383}
   TextLabel: {fileID: 6827193448580868838}
   Canvas: {fileID: -6881161466226244265}

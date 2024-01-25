@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Cards {
   public class CardsManager : MonoBehaviour {
-    [Header("Game stats")] public int MaxHandSize = 5;
-    public int StartHandSize = 3;
+    public int HandSize = 5;
 
     [Header("Current values")] public List<CardData> InitialCardsPool = new();
     public List<CardData> CurrentCardsPool = new();
@@ -21,7 +21,7 @@ namespace Cards {
       //Init
       InitialCardsPool = new List<CardData>(cardsList);
       CurrentCardsPool = new List<CardData>(cardsList);
-      GetCardsToHand(StartHandSize);
+      GetCardsToHand(HandSize);
     }
 
     public void RemoveFromHand(CardData cardData) {
