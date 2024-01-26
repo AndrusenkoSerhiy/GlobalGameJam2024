@@ -34,6 +34,7 @@ namespace GameManager{
     public UobjectsManager UobjectsManager;
     public CurtainsMonitor CurtainsMonitor;
     public ScoreCounter ScoreCounter;
+    public LocationTimerMonitor LocationTimerMonitor;
     
     [Header("Pools")]
     public List<LocationData> LocationsPool = new();
@@ -57,8 +58,15 @@ namespace GameManager{
       CurtainsMonitor.HideCurtains();
     }
 
+    public void CompleteStage(){
+      GameStage = GameStageE.Win;
+      CurtainsMonitor.ShowCurtains(false);
+    }
+
     public void NextLocation(){
-      CurtainsMonitor.ShowCurtains(true,()=>Reset());
+      Reset();
+      GameStage = GameStageE.Game;
+      CurtainsMonitor.HideCurtains();
     }
 
     public void Reset(bool init = false){
@@ -77,6 +85,7 @@ namespace GameManager{
       InitHouseManager(CurrentLocationData);
       InitCardsManager();
       InitUobjectsManager();
+      LocationTimerMonitor.Init(CurrentLocationData);
     }
 
     public void InitHouseManager(LocationData locationData){

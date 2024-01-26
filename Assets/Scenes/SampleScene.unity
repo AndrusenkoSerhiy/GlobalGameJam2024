@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &129297158 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1071050705841169568, guid: 1e2084597a23959419401ff2e86e3c9d, type: 3}
+  m_PrefabInstance: {fileID: 1394500030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d739dea04988be40a213646c6c024c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &580459270
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,14 +501,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 472294768749717306, guid: 1e2084597a23959419401ff2e86e3c9d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 831129614705412936, guid: 1e2084597a23959419401ff2e86e3c9d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3130838941758134838, guid: 1e2084597a23959419401ff2e86e3c9d, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -513,10 +516,6 @@ PrefabInstance:
     - target: {fileID: 3169305243699497466, guid: 1e2084597a23959419401ff2e86e3c9d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3236090807923146860, guid: 1e2084597a23959419401ff2e86e3c9d, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 43.73999
       objectReference: {fileID: 0}
     - target: {fileID: 4879376907276840182, guid: 1e2084597a23959419401ff2e86e3c9d, type: 3}
       propertyPath: m_Pivot.x
@@ -598,17 +597,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6454409863561546060, guid: 1e2084597a23959419401ff2e86e3c9d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6871070048160581791, guid: 1e2084597a23959419401ff2e86e3c9d, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7944464656554755172, guid: 1e2084597a23959419401ff2e86e3c9d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8873991003446801606, guid: 1e2084597a23959419401ff2e86e3c9d, type: 3}
       propertyPath: m_Camera
@@ -690,6 +681,10 @@ PrefabInstance:
       propertyPath: CurtainsMonitor
       value: 
       objectReference: {fileID: 2108631392}
+    - target: {fileID: 7385037541107818064, guid: 59b826a4a23ca8e449e79af40f875afe, type: 3}
+      propertyPath: LocationTimerMonitor
+      value: 
+      objectReference: {fileID: 129297158}
     - target: {fileID: 8811475813203151234, guid: 59b826a4a23ca8e449e79af40f875afe, type: 3}
       propertyPath: m_Name
       value: GameManager
