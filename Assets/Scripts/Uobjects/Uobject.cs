@@ -1,3 +1,4 @@
+using Audio;
 using Inventory;
 using Inventory.Inventory;
 using UnityEngine;
@@ -14,6 +15,8 @@ namespace Uobjects{
     private float currentTime = 0f;
     public bool isInteracting;
     public bool isOpened;
+
+    private AudioEmitter _interactSfx;
 
     private InventoryDefinition _inventoryDef;
 
@@ -63,11 +66,16 @@ namespace Uobjects{
 
       // Reset progress bar
       progressBar.fillAmount = 1f;
+
+      if (_interactSfx != null)
+        _interactSfx.Stop();
     }
 
     public void StartInteraction()
     {
       isInteracting = true;
+      
+      _interactSfx = AudioController.Instance.Interact();
     }
 
     public void StopInteract()

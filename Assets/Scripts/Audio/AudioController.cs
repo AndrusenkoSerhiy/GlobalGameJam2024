@@ -60,7 +60,7 @@ namespace Audio
 			_isInited = false;
 		}
 		
-		private void PlayAudio(string id) => player.Play(id, owner: transform);
+		private AudioEmitter PlayAudio(string id) => player.Play(id, owner: transform);
 		
 		#endregion
 
@@ -69,6 +69,8 @@ namespace Audio
 		public void Play() => PlayAudio("Start");
 		
 		public void Curtains() => PlayAudio("Curtains");
+		
+		public AudioEmitter Interact() => PlayAudio("Interact");
 
 		public void CardFlip() => PlayAudio("Card_Flip");
 		
