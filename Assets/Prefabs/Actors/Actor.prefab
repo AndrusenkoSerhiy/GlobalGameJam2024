@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2493913386437096392}
   - component: {fileID: 4284369397984253704}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Actor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,6 +49,7 @@ MonoBehaviour:
   characterData: {fileID: 11400000, guid: a1e314edac222854ebe472a967097a80, type: 2}
   randMood: 0
   CurMood: 0
+  _peopleAnimation: {fileID: 0}
 --- !u!1 &5179413257150709618
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,7 +62,7 @@ GameObject:
   - component: {fileID: 1154061335989428470}
   - component: {fileID: 7605397132684254336}
   - component: {fileID: 1565702165471019395}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +166,7 @@ GameObject:
   - component: {fileID: 4815204945794697307}
   - component: {fileID: 1122614474298464398}
   - component: {fileID: 6205001025492145528}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

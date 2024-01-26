@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - FxTemporaire
+  - Camera_UI
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Character
   - Water
   - UI
   - 

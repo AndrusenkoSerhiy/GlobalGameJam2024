@@ -10760,7 +10760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6859076445158417528, guid: 59b38f7376a31a741b1beaf0c558de74, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -379.99603
+      value: -379.99585
       objectReference: {fileID: 0}
     - target: {fileID: 6859076445158417528, guid: 59b38f7376a31a741b1beaf0c558de74, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -11238,6 +11238,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3660407546373431282, guid: 8fd2492402ce62a48b96fc98e4d94c96, type: 3}
+      propertyPath: Canvas
+      value: 
+      objectReference: {fileID: 8873991003446801606}
     - target: {fileID: 5481055950684152963, guid: 8fd2492402ce62a48b96fc98e4d94c96, type: 3}
       propertyPath: m_Name
       value: MoodMonitor
@@ -11264,6 +11268,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4879376907276840182}
     m_Modifications:
+    - target: {fileID: 6399941953212484140, guid: 56ffdb30abc178e44aaaa8ec41de4b40, type: 3}
+      propertyPath: Canvas
+      value: 
+      objectReference: {fileID: 8873991003446801606}
     - target: {fileID: 6859076445158417528, guid: 56ffdb30abc178e44aaaa8ec41de4b40, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

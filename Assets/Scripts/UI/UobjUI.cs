@@ -12,23 +12,25 @@ namespace UI{
     public Image uiImageTest;
     [SerializeField] private Vector3 _offset;
     private Tweener tween;
+    private Camera _camera;
+    private Canvas _canvas;
 
-    public void Init(Uobject uobj){
+    public void Init(Uobject uobj, Camera camera, Canvas canvas){
       target = uobj;
       target.SetImage(uiImageTest);
       target.InitInventory();
+      _camera = camera;
+      _canvas = canvas;
     }
     
     void Update()
     {
       if (target != null && uiImage != null)
       {
-        // Convert 3D object's position to screen space using UI camera
-        RectTransform canvasRectTransform = uiImage.canvas.GetComponent<RectTransform>();
-        Vector2 screenPosition = RectTransformUtility.WorldToScreenPoint(Camera.main, target.transform.position);
-
-        // Set the UI image's anchored position
-        uiImage.rectTransform.anchoredPosition = screenPosition - canvasRectTransform.sizeDelta / 2f;
+        var screenPosition = Camera.main.WorldToScreenPoint(target.transform.position);
+        var localPos = Vector2.zero;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(_canvas.transform as RectTransform, screenPosition, _camera, out localPos);
+        uiImage.rectTransform.anchoredPosition = localPos;
       }
     }
 

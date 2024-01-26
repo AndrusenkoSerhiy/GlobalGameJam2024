@@ -562,7 +562,7 @@ MonoBehaviour:
   uiImage: {fileID: 3755201227850160428}
   target: {fileID: 0}
   Slider: {fileID: 8566990678613421159}
-  Offset: {x: 1, y: 3, z: 0}
+  Offset: {x: 1, y: 1.7, z: 0}
 --- !u!222 &8232888236435965251
 CanvasRenderer:
   m_ObjectHideFlags: 0

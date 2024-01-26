@@ -7,6 +7,8 @@ namespace UI{
   public class MoodMonitor : MonoBehaviour{
     public MoodProgressBar ProgressBar;
     private List<MoodProgressBar> allPB = new();
+    public Camera Camera;
+    public Canvas Canvas;
 
     public void ClearAll() {
       allPB.ForEach(c=>Destroy(c.gameObject));
@@ -16,7 +18,7 @@ namespace UI{
     public void AddMoodBar(Actor actor, CharacterData chardata){
       var progressbar = Instantiate(ProgressBar, transform);
       allPB.Add(progressbar);
-      progressbar.Init(actor, chardata);
+      progressbar.Init(actor, chardata,Camera,Canvas);
     }
   }
 }
