@@ -20,6 +20,12 @@ namespace Character{
     public void InitMood(){
       CurMood = randMood ? Random.Range(characterData.MinMood, characterData.MaxMood) : 0;
       ChangeAnimation();
+      RandomRotation();
+    }
+
+    private void RandomRotation(){
+      float randomAngle = Random.Range(-20f, 20f);
+      transform.rotation *= Quaternion.Euler(0f, randomAngle, 0f);
     }
 
     public bool CheckTags(List<Tag> targetTags){
