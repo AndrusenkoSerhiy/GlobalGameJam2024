@@ -1,6 +1,5 @@
 using UnityEngine;
 
-namespace DefaultNamespace{
   public class PeopleAnimation : MonoBehaviour{
     public Animator Animator;
     
@@ -31,4 +30,3 @@ namespace DefaultNamespace{
       }
     }*/
   }
-}

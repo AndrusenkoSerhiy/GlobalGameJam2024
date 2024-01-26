@@ -66,12 +66,26 @@ namespace GameManager{
       var plInv = InventoryUiController.Instance.GetPlayerInventory();
       var itemCount = plInv.allItems.Length;
       var itemCost = plInv.allItems.Sum(item => item.price);
+      ScoreCounter.AddScore(itemCost);
       plInv.Clear();
       
       CurtainsMonitor.SummaryLabel.text = $"You sold {itemCount} items for {itemCost} coins";// + ScoreCounter.CurrentScore + " coins";
       CurtainsMonitor.ShowCurtains(false);
       
       AudioController.Instance.Win(); //Lose
+    }
+
+    public void LoseGame() {
+      GameStage = GameStageE.Lose;
+      
+      InventoryUiController.Instance.Hide();
+      var plInv = InventoryUiController.Instance.GetPlayerInventory();
+      plInv.Clear();
+      CurtainsMonitor.SummaryLabel.text = $"You got to jail for stealing. Score : " + ScoreCounter.CurrentScore;
+      ScoreCounter.ResetScore();
+      CurtainsMonitor.ShowCurtains(false);
+      
+      AudioController.Instance.Lose();
     }
 
     public void NextLocation(){
@@ -84,6 +98,12 @@ namespace GameManager{
       //ClearOld
       CardsInLocation.Clear();
       CharactersInLocation.Clear();
+      MoodMonitor.ClearAll();
+      
+      InventoryUiController.Instance.Hide();
+      
+      var plInv = InventoryUiController.Instance.GetPlayerInventory();
+      plInv.Clear();
 
 
       //Generate new
@@ -98,6 +118,15 @@ namespace GameManager{
       InitCardsManager();
       InitUobjectsManager();
       LocationTimerMonitor.Init(CurrentLocationData);
+    }
+
+    public bool CheckLoseCondition() {
+      if (HouseManager.CurRoom.ActorsInRoom.Any(c => c.CurMood <= 0) ) {
+        LoseGame();
+        return true;
+      }
+
+      return false;
     }
 
     public void InitHouseManager(LocationData locationData){

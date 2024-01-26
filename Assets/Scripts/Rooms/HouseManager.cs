@@ -11,6 +11,7 @@ namespace Rooms{
   public class HouseManager : MonoBehaviour{
     [SerializeField] private List<Room> _curHouse = new();
     [SerializeField] private Room _curRoom;
+    public Room CurRoom => _curRoom;
     [SerializeField] private Room _prevRoom;
 
     private List<Room> _availableRoom = new();

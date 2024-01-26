@@ -102,6 +102,9 @@ namespace UI{
         pos.y = yM;
         MainCurtain.anchoredPosition = pos;
       }).OnComplete(() => {
+        PlayButton.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.PreGame ||
+                             GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.Lose);
+        NextButton.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.Win);
         SwitchLabels();
       });
     }

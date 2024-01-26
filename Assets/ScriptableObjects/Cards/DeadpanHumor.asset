@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NameText: Deadpan Humor
   TagsList:
-  - {fileID: 11400000, guid: 0bd2c16bd1f276944a887c9db2382d62, type: 2}
+  - {fileID: 11400000, guid: 5c4327742c0b22a43979b6d3da83b4c3, type: 2}
   FaceSprite: {fileID: 21300000, guid: ec11a07eb65d2b74ea41719bb8fef330, type: 3}

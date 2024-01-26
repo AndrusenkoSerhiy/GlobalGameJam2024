@@ -11,17 +11,34 @@ namespace Character{
     [SerializeField] private bool randMood;
     [SerializeField] public int CurMood;
     [SerializeField] private PeopleAnimation _peopleAnimation;
+    private float timer = 0f;
 
     public void Init(CharacterData charData){
       characterData = charData;
       InitMood();
     }
 
-    public void InitMood(){
+    public void InitMood() {
+      timer = 0f;
       CurMood = randMood ? Random.Range(characterData.MinMood, characterData.MaxMood) : 0;
       ChangeAnimation();
       RandomRotation();
     }
+
+    void Update() {
+
+      if (CurMood > 0) {
+        timer += Time.deltaTime;
+        if (timer >= 20f) {
+          CurMood--;
+          timer = 0f;
+        }
+      }
+      else {
+        timer = 0f;
+      }
+    }
+
 
     private void RandomRotation(){
       float randomAngle = Random.Range(-20f, 20f);

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NameText: Wordplay
   TagsList:
-  - {fileID: 11400000, guid: f7678832178b23d47a6b8c7a16c3c1f2, type: 2}
+  - {fileID: 11400000, guid: 5c4327742c0b22a43979b6d3da83b4c3, type: 2}
   FaceSprite: {fileID: 21300000, guid: 46596478f8f19414a8c56496f2625b2a, type: 3}

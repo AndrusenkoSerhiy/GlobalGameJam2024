@@ -33,8 +33,12 @@ namespace Uobjects{
     }
     
     void Update(){
-      if (isInteracting)
-      {
+      if (isInteracting) {
+        if (GameManager.GameManager.Instance.CheckLoseCondition()) {
+          ResetInteraction();
+          GameManager.GameManager.Instance.UobjectsManager.UobjMonitorUI.DestroyAllUobjUI();
+          return;
+        }
         currentTime += Time.deltaTime;
 
         // Update progress bar
@@ -81,7 +85,7 @@ namespace Uobjects{
     public void StopInteract()
     {
       isInteracting = false;
-      ResetInteraction();
+      //ResetInteraction();
     }
   }
 }

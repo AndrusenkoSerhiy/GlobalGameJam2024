@@ -81,6 +81,7 @@ namespace Audio
 		public void Joke() => PlayAudio("Clown_Joke");
 		
 		public void Win() => PlayAudio("Clown_Win");
+		public void Lose() => PlayAudio("Clown_Lose");
 		
 		public void Fail() => PlayAudio("Clown_Fail");
 		
