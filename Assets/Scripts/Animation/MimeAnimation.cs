@@ -64,11 +64,9 @@ namespace DefaultNamespace {
     private List<int> jokeAnims = new List<int>() { 0, 1, 2 };
 
     public void PlayJoke() {
-      Debug.Log("prev: " + prevJoke);
       var listAnims = new List<int>(jokeAnims);
       listAnims.Remove(prevJoke);
       var rand = listAnims[Random.Range(0, 2)];
-      Debug.Log("rand: " + rand);
       prevJoke = rand;
       if (rand == 0)
         PlayMimeAnimation(MimeAnimEnum.Joke1);
@@ -79,7 +77,6 @@ namespace DefaultNamespace {
     }
 
     public void PlayMimeAnimation(MimeAnimEnum mimeAnimEnum) {
-      Debug.Log("Play : " + mimeAnimEnum);
       Animator.Play("Default", 0, (int)mimeAnimEnum / (float)60);
       Animator.speed = 0;
     }

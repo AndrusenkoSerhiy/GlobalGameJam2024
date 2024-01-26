@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 namespace Character {
   public class Actor : MonoBehaviour {
     [SerializeField] private CharacterData characterData;
+    public CharacterData CharacterData => characterData;
     [SerializeField] private bool randMood;
     [SerializeField] public int CurMood;
     [SerializeField] private PeopleAnimation _peopleAnimation;

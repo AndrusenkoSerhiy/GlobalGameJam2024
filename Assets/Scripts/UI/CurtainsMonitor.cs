@@ -71,6 +71,7 @@ namespace UI{
     }
     
     public void HideCurtains(){
+      GameManager.GameManager.Instance.RoomInfoMonitor.SetInfo(GameManager.GameManager.Instance.HouseManager.CurRoom);
       PreviousRoom.gameObject.SetActive(GameManager.GameManager.Instance.HouseManager.CanPevRoom());
       NextRoom.gameObject.SetActive(GameManager.GameManager.Instance.HouseManager.CanNextRoom());
       PreviousRoom.isClicked = false;
