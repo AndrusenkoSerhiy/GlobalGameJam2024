@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using StealingE = Audio.AudioData.AudioStealingTypeE;
 
 namespace Audio
 {

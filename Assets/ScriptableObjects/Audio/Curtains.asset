@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: Curtains
   type: 0
-  volume: -2
+  volume: -6
   volumeDelta: 0
   pitch: 0
-  pitchDelta: 0
+  pitchDelta: 1
   cooldown: 150
   maxClipCount: 2
   mixedGroupRef: {fileID: 3300774153288592925, guid: 5e3154ebcd608814fb0fa7ceb121109e, type: 2}

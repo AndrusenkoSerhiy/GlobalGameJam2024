@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
 
+//esttAlex
 namespace Audio
 {
 	[RequireComponent(typeof(AudioDataManager))]
 	public class AudioController : MonoBehaviour
 	{
+		public static AudioController Instance;
+		
 		[SerializeField] private AudioListener listener;
 		[SerializeField] private AudioMixer mixer;
 		[SerializeField] internal AudioEmitter emitterSample;
@@ -22,11 +25,13 @@ namespace Audio
 
 		private bool _isInited = false;
 
+		#region Init
+		
 		private void Start()
 		{
 			Init();
 			
-			StartMenu();
+			var themeEm = player.Play("Theme", transform);
 		}
 
 		private void Init()
@@ -35,7 +40,7 @@ namespace Audio
 				return;
 
 			DontDestroyOnLoad(this);
-
+			
 			dataManager = gameObject.GetComponent<AudioDataManager>();
 			dataManager.Init();
 
@@ -44,6 +49,8 @@ namespace Audio
 			player = new AudioPlayer(this);
 			
 			_isInited = true;
+
+			Instance = this;
 		}
 
 		public void OnApplicationQuit()
@@ -52,26 +59,31 @@ namespace Audio
 
 			_isInited = false;
 		}
-
-		public Vector3 GetListenerPosition()
-		{
-			return listener.transform.position;
-		}
-
-		#region States
-
-		public void StartMenu()
-		{
-			var _themeEm = player.Play("Theme", transform);
-		}
+		
+		private void PlayAudio(string id) => player.Play(id, owner: transform);
 		
 		#endregion
 
 		#region Preset
+		
+		public void Play() => PlayAudio("Start");
+		
+		public void Curtains() => PlayAudio("Curtains");
 
-		public void UiClick() => player.Play("Click", owner: transform);
-
+		public void CardFlip() => PlayAudio("Card_Flip");
+		
+		public void CardSuccess() => PlayAudio("Card_Success");
+		
+		public void CardFail() => PlayAudio("Card_Fail");
+		
+		public void Joke() => PlayAudio("Clown_Joke");
+		
+		public void Win() => PlayAudio("Clown_Win");
+		
+		public void Fail() => PlayAudio("Clown_Fail");
+		
+		public void Suspicious() => PlayAudio("Guest_Suspicious");
+		
 		#endregion
-
 	}
 }

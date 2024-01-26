@@ -116,21 +116,6 @@ namespace Audio
 
         #region Play/Stop
 
-        //by Data
-        public AudioEmitter Play(AudioData data)
-        {
-            if (!_isInited || data == null) return null;
-
-            return TryPlay(data, Vector3.zero);
-        }
-
-        public AudioEmitter Play(string audioId)
-        {
-            if (!_isInited) return null;
-
-            return Play(_audioController.dataManager.GetAudioByName(audioId));
-        }
-
         public AudioEmitter Play(AudioData data, Vector3 pos, Transform owner = null)
         {
             if (!_isInited || data == null) return null;
@@ -138,60 +123,11 @@ namespace Audio
             return TryPlay(data, pos, owner);
         }
 
-        public AudioEmitter Play(string audioId, Vector3 pos, Transform owner = null)
-        {
-            if (!_isInited) return null;
-
-            return Play(_audioController.dataManager.GetAudioByName(audioId), pos, owner);
-        }
-
         public AudioEmitter Play(string audioId, Transform owner)
         {
             if (!_isInited) return null;
 
             return Play(_audioController.dataManager.GetAudioByName(audioId), Vector3.zero, owner);
-        }
-
-        public AudioEmitter PlayLooped(string audioId, Transform owner)
-        {
-            if (!_isInited) return null;
-
-            return TryPlay(_audioController.dataManager.GetAudioByName(audioId), Vector3.zero, owner);  
-        }
-        
-        public AudioEmitter PlayLooped(AudioData data, Transform owner)
-        {
-            if (!_isInited) return null;
-
-            return TryPlay(data, Vector3.zero, owner);  
-        }
-
-        //by Name
-        public AudioData GetAudioByName(string audioId)
-        {
-            if (!_isInited) return null;
-
-            return _audioController.dataManager.GetAudioByName(audioId);
-        }
-
-        public void Stop(string audioId, Transform owner = null)
-        {
-            if (!_isInited) return;
-
-            Stop(GetAudioByName(audioId), owner);
-        }
-
-        public void Stop(AudioData data, Transform owner = null)
-        {
-            if (!_isInited || data == null) return;
-
-            int entityId = (owner == null) ? -1 : owner.GetInstanceID();
-
-            var selected = _audioController.instanceManager.audioEmitters
-                .Where(e => e.GetId().Equals(data.id) && e.GetOwnerId().Equals(entityId));
-
-            foreach (var emitter in selected)
-                emitter.Stop();
         }
 
         public void StopAll()
