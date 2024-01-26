@@ -3,6 +3,7 @@ using Cards;
 using Character;
 using Location;
 using Rooms;
+using UI;
 using UnityEngine;
 using Uobjects;
 using Random = UnityEngine.Random;
@@ -10,6 +11,16 @@ using Random = UnityEngine.Random;
 namespace GameManager{
   public class GameManager : MonoBehaviour{
     public static GameManager Instance;
+
+    public enum GameStageE{
+      PreGame = 0,
+      Game = 1,
+      Lose = 2,
+      Win = 3
+    }
+
+    public GameStageE GameStage;
+    
     [Header("Current location info")]
     private int CurLocationIndex = 0;
     public LocationData CurrentLocationData;
@@ -20,6 +31,7 @@ namespace GameManager{
     public HouseManager HouseManager;
     public CardsManager CardsManager;
     public UobjectsManager UobjectsManager;
+    public CurtainsMonitor CurtainsMonitor;
     
     [Header("Pools")]
     public List<LocationData> LocationsPool = new();
@@ -32,6 +44,8 @@ namespace GameManager{
 
       Instance = this;
       DontDestroyOnLoad(gameObject);
+      GameStage = GameStageE.PreGame;
+      CurtainsMonitor.HideCurtains();
       Reset(true);
     }
 

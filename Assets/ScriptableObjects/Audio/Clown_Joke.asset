@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66aef478738eb954b98407c9567e69cb, type: 3}
+  m_Name: Clown_Joke
+  m_EditorClassIdentifier: 
+  id: Clown_Joke
+  type: 0
+  volume: 0
+  volumeDelta: 0
+  pitch: 0
+  pitchDelta: 0
+  cooldown: 150
+  maxClipCount: 2
+  mixedGroupRef: {fileID: 3300774153288592925, guid: 5e3154ebcd608814fb0fa7ceb121109e, type: 2}
+  ignoreTimeScale: 0
+  clipRefList:
+  - {fileID: 8300000, guid: 5403625ac29e7844d861046e3c33f1c4, type: 3}
+  - {fileID: 8300000, guid: e107951de06868e4bb538ba93932a433, type: 3}
+  - {fileID: 8300000, guid: 61f795d490eb06c4d8078566c0375fb8, type: 3}
+  - {fileID: 8300000, guid: 22e8336207310594a9ae6d5e7595504a, type: 3}
+  - {fileID: 8300000, guid: d783e290a326d4149aa21accf63e3cf3, type: 3}
+  - {fileID: 8300000, guid: 85ffe5b3e6f22e340838559d4506a474, type: 3}
+  - {fileID: 8300000, guid: d7d89bf310af29246a39f61a0f5d4de6, type: 3}
+  - {fileID: 8300000, guid: da3ae43adc1656c4095faede3d827fd3, type: 3}
+  - {fileID: 8300000, guid: d086d2d2defd8b14784aa99721fcdd13, type: 3}
+  - {fileID: 8300000, guid: bd3f1416dc8e27f4095ce9ccf0fce95e, type: 3}
+  - {fileID: 8300000, guid: 4a84edf940990704c8b40926e2cc2386, type: 3}
+  - {fileID: 8300000, guid: 2c231c7f936ac284dabfc1894a970e29, type: 3}
+  - {fileID: 8300000, guid: adc19b1dda9741f4e983b8fb1a3b3626, type: 3}
+  - {fileID: 8300000, guid: f3b3a22e353c1f34689481b6538c7d36, type: 3}
+  - {fileID: 8300000, guid: 9ab60e735d40187478dc9c29986d3f2e, type: 3}
