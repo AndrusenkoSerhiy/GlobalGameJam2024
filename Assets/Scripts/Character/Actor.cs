@@ -12,6 +12,10 @@ namespace Character{
 
     public void Init(CharacterData charData){
       characterData = charData;
+      InitMood();
+    }
+
+    public void InitMood(){
       CurMood = randMood ? Random.Range(characterData.MinMood, characterData.MaxMood) : 0;
       ChangeAnimation();
     }

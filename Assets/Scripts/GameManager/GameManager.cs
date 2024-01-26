@@ -21,23 +21,20 @@ namespace GameManager{
     }
 
     public GameStageE GameStage;
-    
-    [Header("Current location info")]
-    private int CurLocationIndex = 0;
+
+    [Header("Current location info")] private int CurLocationIndex = 0;
     public LocationData CurrentLocationData;
     public List<CharacterData> CharactersInLocation = new();
     public List<CardData> CardsInLocation = new();
 
-    [Header("Components")]
-    public HouseManager HouseManager;
+    [Header("Components")] public HouseManager HouseManager;
     public CardsManager CardsManager;
     public UobjectsManager UobjectsManager;
     public CurtainsMonitor CurtainsMonitor;
     public ScoreCounter ScoreCounter;
     public LocationTimerMonitor LocationTimerMonitor;
-    
-    [Header("Pools")]
-    public List<LocationData> LocationsPool = new();
+
+    [Header("Pools")] public List<LocationData> LocationsPool = new();
 
     private void Awake(){
       if (Instance){
@@ -60,6 +57,7 @@ namespace GameManager{
 
     public void CompleteStage(){
       GameStage = GameStageE.Win;
+      CurtainsMonitor.SummaryLabel.text = "You sold 25 items ...... " + ScoreCounter.CurrentScore + " coins";
       CurtainsMonitor.ShowCurtains(false);
     }
 
@@ -73,15 +71,16 @@ namespace GameManager{
       //ClearOld
       CardsInLocation.Clear();
       CharactersInLocation.Clear();
-      
-      
+
+
       //Generate new
       int curIndex = init ? 0 : CurLocationIndex + 1;
-      if (curIndex >= LocationsPool.Count) curIndex = Random.Range(0, LocationsPool.Count-1);
+      if (curIndex >= LocationsPool.Count) curIndex = Random.Range(0, LocationsPool.Count - 1);
       CurLocationIndex = curIndex;
       CurrentLocationData = LocationsPool[CurLocationIndex];
       CardsInLocation = CurrentLocationData.CardsPool.GetRandomCards(CurrentLocationData.SessionCardsMaxCount);
-      CharactersInLocation = CurrentLocationData.CharactersPool.GetRandomChars(CurrentLocationData.SessionCharsMaxCount);
+      CharactersInLocation =
+        CurrentLocationData.CharactersPool.GetRandomChars(CurrentLocationData.SessionCharsMaxCount);
       InitHouseManager(CurrentLocationData);
       InitCardsManager();
       InitUobjectsManager();

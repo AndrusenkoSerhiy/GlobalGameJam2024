@@ -87,6 +87,7 @@ namespace Rooms{
         var newIndex = _curRoom.RoomIndex + direction;
         SetCurRoom(newIndex);
         SetRoomPos();
+        _curRoom.ActorsInRoom.ForEach(a=>a.InitMood());
       });
     }
 
