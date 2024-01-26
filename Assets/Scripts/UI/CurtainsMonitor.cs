@@ -1,6 +1,7 @@
 using System;
 using Audio;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 namespace UI{
@@ -8,16 +9,22 @@ namespace UI{
     public RectTransform MainCurtain;
     public RectTransform LeftCurtain;
     public RectTransform RightCurtain;
+    public TMP_Text SummaryLabel;
     public GameObject PlayButton;
+    public GameObject NextButton;
     public GameObject LoseLabel;
     public GameObject NextLabel;
     public GameObject StartLabel;
 
     void SwitchLabels(){
-      PlayButton.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.PreGame);
+      PlayButton.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.PreGame ||
+                           GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.Lose);
+      NextButton.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.Win);
       StartLabel.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.PreGame);
       LoseLabel.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.Lose);
       NextLabel.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.Win);
+      SummaryLabel.gameObject.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.Win ||
+                                        GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.Lose);
     }
 
     public void ShowCurtains(bool forceHiding = true, Action onCompleteAll = null){

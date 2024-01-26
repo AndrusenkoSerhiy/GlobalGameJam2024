@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: Card_Success
   type: 0
-  volume: -2
+  volume: -4
   volumeDelta: 0
   pitch: 0
   pitchDelta: 2
