@@ -15,4 +15,4 @@ MonoBehaviour:
   NameText: Politician Joke
   TagsList:
   - {fileID: 11400000, guid: 0bd2c16bd1f276944a887c9db2382d62, type: 2}
-  FaceSprite: {fileID: 21300000, guid: 406b7bd63398bcc49b182f4e1b698578, type: 3}
+  FaceSprite: {fileID: 21300000, guid: 361d46ad9a215234e94bf113c65dc94d, type: 3}
