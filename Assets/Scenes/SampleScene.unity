@@ -592,6 +592,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7535604832329784794, guid: 1e2084597a23959419401ff2e86e3c9d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 104.132935
+      objectReference: {fileID: 0}
     - target: {fileID: 8873991003446801606, guid: 1e2084597a23959419401ff2e86e3c9d, type: 3}
       propertyPath: m_Camera
       value: 
@@ -665,6 +669,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7385037541107818064, guid: 59b826a4a23ca8e449e79af40f875afe, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7385037541107818064, guid: 59b826a4a23ca8e449e79af40f875afe, type: 3}
       propertyPath: CurtainsMonitor
       value: 
       objectReference: {fileID: 2108631392}
@@ -675,6 +683,10 @@ PrefabInstance:
     - target: {fileID: 8811475813203151234, guid: 59b826a4a23ca8e449e79af40f875afe, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811475813203151234, guid: 59b826a4a23ca8e449e79af40f875afe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

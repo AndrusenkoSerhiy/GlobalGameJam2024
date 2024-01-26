@@ -45,14 +45,16 @@ namespace GameManager{
       Instance = this;
       DontDestroyOnLoad(gameObject);
       GameStage = GameStageE.PreGame;
-      CurtainsMonitor.HideCurtains();
-      Reset(true);
     }
 
-    public void Update(){
-      if (Input.GetKeyDown(KeyCode.Space)){
-        Reset();
-      }
+    public void StartGame(){
+      GameStage = GameStageE.Game;
+      Reset(true);
+      CurtainsMonitor.HideCurtains();
+    }
+
+    public void NextLocation(){
+      CurtainsMonitor.ShowCurtains(true,()=>Reset());
     }
 
     public void Reset(bool init = false){

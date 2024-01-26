@@ -7,8 +7,20 @@ namespace UI{
     public RectTransform MainCurtain;
     public RectTransform LeftCurtain;
     public RectTransform RightCurtain;
+    public GameObject PlayButton;
+    public GameObject LoseLabel;
+    public GameObject NextLabel;
+    public GameObject StartLabel;
+
+    void SwitchLabels(){
+      PlayButton.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.PreGame);
+      StartLabel.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.PreGame);
+      LoseLabel.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.Lose);
+      NextLabel.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.Win);
+    }
 
     public void ShowCurtains(bool forceHiding = true, Action onCompleteAll = null){
+      SwitchLabels();
       //right
       float xR = RightCurtain.anchoredPosition.x;
       var endXR = 60f;
@@ -65,6 +77,8 @@ namespace UI{
         var pos = MainCurtain.anchoredPosition;
         pos.y = yM;
         MainCurtain.anchoredPosition = pos;
+      }).OnComplete(() => {
+        SwitchLabels();
       });
     }
   }
