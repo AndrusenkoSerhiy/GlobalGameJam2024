@@ -50,6 +50,7 @@ MonoBehaviour:
   characterData: {fileID: 11400000, guid: b6d560855ad622247ada8e34d623e698, type: 2}
   randMood: 0
   CurMood: 0
+  _peopleAnimation: {fileID: -942521129318988859}
 --- !u!95 &3359620185201090189
 Animator:
   serializedVersion: 5

@@ -80,7 +80,7 @@ namespace Rooms{
       UpdateRoom(index);
     }
 
-    private void UpdateRoom(int direction){
+    public void UpdateRoom(int direction){
       if (_curRoom.RoomIndex <= 0 && direction < 0 ||
           _curRoom.RoomIndex >= _curHouse.Count - 1 && direction > 0) return;
       GameManager.GameManager.Instance.CurtainsMonitor.ShowCurtains(true, () => {

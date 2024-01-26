@@ -25,14 +25,5 @@ namespace DefaultNamespace{
       Animator.Play("Default", 0, (int)mimeAnimEnum/(float)60);
       Animator.speed = 0;
     }
-
-    /*private void Update(){
-      if (Input.GetKeyDown(KeyCode.PageUp)){
-        PlayMimeAnimation(MimeAnimEnum.Joke1);
-      }
-      if (Input.GetKeyDown(KeyCode.PageDown)){
-        PlayMimeAnimation(MimeAnimEnum.Win);
-      }
-    }*/
   }
 }

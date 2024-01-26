@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DefaultNamespace;
 using Tags;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -9,6 +10,7 @@ namespace Character{
     [SerializeField] private CharacterData characterData;
     [SerializeField] private bool randMood;
     [SerializeField] public int CurMood;
+    [SerializeField] private PeopleAnimation _peopleAnimation;
 
     public void Init(CharacterData charData){
       characterData = charData;
@@ -36,26 +38,32 @@ namespace Character{
 
     public void ChangeAnimation(){
       if (CurMood == 0){
+        _peopleAnimation.PlayPeopleAnimation(PeopleAnimation.PeopleAnimEnum.Idle);
         Debug.Log(characterData.name + " in default mood");
         return;
       }
 
       if (CurMood == characterData.MaxMood){
+        var rnd = Random.Range(0, 2);
+        _peopleAnimation.PlayPeopleAnimation(rnd==0 ? PeopleAnimation.PeopleAnimEnum.MnahahanahhahHAHA : PeopleAnimation.PeopleAnimEnum.AHAHAhahH );
         Debug.Log(characterData.name + " in razyob mood");
         return;
       }
 
       if (CurMood == characterData.MinMood){
+        _peopleAnimation.PlayPeopleAnimation(PeopleAnimation.PeopleAnimEnum.NotFunnyAtAll);
         Debug.Log(characterData.name + " in shit mood");
         return;
       }
 
       if (CurMood > 0){
+        _peopleAnimation.PlayPeopleAnimation(PeopleAnimation.PeopleAnimEnum.Lol);
         Debug.Log(characterData.name + " in good mood");
         return;
       }
 
       if (CurMood < 0){
+        _peopleAnimation.PlayPeopleAnimation(PeopleAnimation.PeopleAnimEnum.Well);
         Debug.Log(characterData.name + " in bad mood");
       }
     }
