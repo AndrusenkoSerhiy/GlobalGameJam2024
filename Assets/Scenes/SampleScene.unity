@@ -683,6 +683,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e2084597a23959419401ff2e86e3c9d, type: 3}
+--- !u!114 &1597805275 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6725740675588254289, guid: 1e2084597a23959419401ff2e86e3c9d, type: 3}
+  m_PrefabInstance: {fileID: 1394500030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f632f8765b7640d1a37dbadaf2915931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2108631392 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5565785405027228465, guid: 1e2084597a23959419401ff2e86e3c9d, type: 3}
@@ -750,6 +761,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7385037541107818064, guid: 59b826a4a23ca8e449e79af40f875afe, type: 3}
+      propertyPath: MoodMonitor
+      value: 
+      objectReference: {fileID: 1597805275}
     - target: {fileID: 7385037541107818064, guid: 59b826a4a23ca8e449e79af40f875afe, type: 3}
       propertyPath: CurtainsMonitor
       value: 
