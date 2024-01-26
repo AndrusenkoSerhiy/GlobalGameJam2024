@@ -1,3 +1,4 @@
+using System;
 using Cards;
 using DG.Tweening;
 using TMPro;
@@ -10,11 +11,15 @@ namespace UI{
     public CardData CardData;
     public bool IsPlaying;
     public bool CanBePlayed = true;
-    [Header("Components")] public RectTransform RectTransform;
+    [Header("Components")] 
+    public RectTransform RectTransform;
+    public RectTransform BGRectTransform;
     public Image FaceImage;
     public TMP_Text TextLabel;
     public Canvas Canvas;
     public GraphicRaycaster GraphicRaycaster;
+    public GameObject Explosion;
+    public GameObject Poison;
     private Tweener tween;
 
     public void Init(CardData cardData){
@@ -60,7 +65,7 @@ namespace UI{
     }
 
     public void PlayMismatchAnimation(){
-      //x
+      Poison.SetActive(true); //x
       float x = RectTransform.anchoredPosition.x;
       var endX = x;
       var endX_Start = x - 220f;
@@ -81,30 +86,27 @@ namespace UI{
     }
 
     public void PlayMatchAnimation(){
+      Explosion.SetActive(true);
       Sequence seq = DOTween.Sequence();
-      seq.Append(RectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.6f, RotateMode.FastBeyond360)).SetDelay(0.5f);
-      seq.Append(RectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.6f, RotateMode.FastBeyond360));
-      seq.Append(RectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.3f, RotateMode.FastBeyond360));
-      seq.Append(RectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.3f, RotateMode.FastBeyond360));
-      seq.Append(RectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.1f, RotateMode.FastBeyond360));
-      seq.Append(RectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.1f, RotateMode.FastBeyond360));
-      seq.Append(RectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.1f, RotateMode.FastBeyond360));
-      seq.Append(RectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.1f, RotateMode.FastBeyond360));
-      seq.Append(RectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.1f, RotateMode.FastBeyond360));
-      seq.Append(RectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.1f, RotateMode.FastBeyond360));
+      seq.Append(BGRectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.6f, RotateMode.FastBeyond360));
+      seq.Append(BGRectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.6f, RotateMode.FastBeyond360));
+      seq.Append(BGRectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.3f, RotateMode.FastBeyond360));
+      seq.Append(BGRectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.3f, RotateMode.FastBeyond360));
+      seq.Append(BGRectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.1f, RotateMode.FastBeyond360));
+      seq.Append(BGRectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.1f, RotateMode.FastBeyond360));
       seq.Play().OnComplete(() => Destroy(gameObject));
     }
 
     public void OnPointerEnter(PointerEventData eventData){
       if (!CanBePlayed) return;
-      DOTween.Kill(tween);
+      //DOTween.Kill(tween);
       Canvas.sortingOrder = 1;
       tween = transform.DOScale(new Vector3(1.2f, 1.2f, 1f), 0.2f).SetEase(Ease.OutBack);
     }
 
     public void OnPointerExit(PointerEventData eventData){
       if (!CanBePlayed) return;
-      DOTween.Kill(tween);
+      //DOTween.Kill(tween);
       Canvas.sortingOrder = 0;
       tween = transform.DOScale(new Vector3(1f, 1f, 1f), 0.2f).SetEase(Ease.Linear);
     }

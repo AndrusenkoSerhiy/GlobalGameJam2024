@@ -20,7 +20,6 @@ namespace Uobjects{
       progressBar = img;
     }
     void Update(){
-      if (isOpened) return;
       if (isInteracting)
       {
         currentTime += Time.deltaTime;
@@ -42,7 +41,8 @@ namespace Uobjects{
     {
       // Implement the logic to open the object
       isOpened = true;
-      Debug.LogError("Object opened!");
+      Debug.LogError("Object opened! Show inventory");
+      ResetInteraction();
     }
 
     void ResetInteraction()
@@ -56,12 +56,11 @@ namespace Uobjects{
 
     public void StartInteraction()
     {
-      Debug.LogError("start interaction");
       isInteracting = true;
     }
 
-    public void StopInteract(){
-      Debug.LogError("stop interact");
+    public void StopInteract()
+    {
       isInteracting = false;
       ResetInteraction();
     }

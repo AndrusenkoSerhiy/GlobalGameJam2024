@@ -12,27 +12,28 @@ namespace Rooms{
     [SerializeField] private List<Room> _curHouse = new();
     [SerializeField] private Room _curRoom;
     [SerializeField] private Room _prevRoom;
-    
+
     private List<Room> _availableRoom = new();
     private int _houseRooms;
 
     private List<Actor> _actors = new();
     private List<Uobject> _uobjects = new();
     private LocationData _locationData;
+
     public void Init(LocationData locData){
       //ClearPrevious
       //_actors.ForEach(e=>Destroy(e.gameObject));
       _actors.Clear();
       foreach (var room in _curHouse){
-        room.ActorsInRoom.ForEach(e=>Destroy(e.gameObject));
-        room.ActorsInRoom.Clear();
+        room.Clear();
       }
-      _curHouse.ForEach(r=>Destroy(r.gameObject));
+
+      _curHouse.ForEach(r => Destroy(r.gameObject));
       _curHouse.Clear();
       _curRoom = null;
       _prevRoom = null;
       _availableRoom.Clear();
-      
+
       //Init new
       _locationData = locData;
       _houseRooms = _locationData.HouseRooms;
@@ -45,10 +46,12 @@ namespace Rooms{
     private void GenerateHouse(){
       for (int i = 0; i < _houseRooms; i++){
         var rndRoom = GetRandomRoom();
-        var room = Instantiate(rndRoom, new Vector3(0, -10, 0), Quaternion.identity);
+        var room = Instantiate(rndRoom, new Vector3(0, -40, 0), Quaternion.identity);
         room.RoomIndex = i;
         _curHouse.Add(room);
+        room.InitJoints();
       }
+
       SetCurRoom(0);
     }
 
@@ -60,8 +63,8 @@ namespace Rooms{
     }
 
     private void SetRoomPos(){
-      _curRoom.transform.position = new Vector3(0,0,-10);
-      if (_prevRoom != null) _prevRoom.transform.position = new Vector3(0,-10,-10);
+      _curRoom.transform.position = new Vector3(0, 0, -10);
+      if (_prevRoom != null) _prevRoom.transform.position = new Vector3(0, -40, -40);
     }
 
     private void SetCurRoom(int index){
@@ -78,10 +81,13 @@ namespace Rooms{
     }
 
     private void UpdateRoom(int direction){
-      if (_curRoom.RoomIndex <= 0 && direction < 0 || _curRoom.RoomIndex >= _curHouse.Count - 1 && direction > 0) return;
-      var newIndex = _curRoom.RoomIndex + direction;
-      SetCurRoom(newIndex);
-      SetRoomPos();
+      if (_curRoom.RoomIndex <= 0 && direction < 0 ||
+          _curRoom.RoomIndex >= _curHouse.Count - 1 && direction > 0) return;
+      GameManager.GameManager.Instance.CurtainsMonitor.ShowCurtains(true, () => {
+        var newIndex = _curRoom.RoomIndex + direction;
+        SetCurRoom(newIndex);
+        SetRoomPos();
+      });
     }
 
     private void SpawnActors(){
@@ -89,7 +95,7 @@ namespace Rooms{
       foreach (var room in _curHouse){
         spawnPoint.AddRange(room.SpawnPoints);
       }
-      
+
       var i = 0;
       //create actor ant set in position
       foreach (var charData in GameManager.GameManager.Instance.CharactersInLocation){
@@ -99,12 +105,12 @@ namespace Rooms{
         _actors.Add(actor);
         i++;
       }
+
       //add actor to room list
       foreach (var room in _curHouse){
         room.ActorsInRoom.AddRange(_actors.GetRange(0, room.SpawnPoints.Count));
         _actors.RemoveRange(0, room.SpawnPoints.Count);
       }
-      
     }
 
     public bool PlayCard(CardData cardData){
