@@ -14,17 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: Theme
   type: 2
-  volume: 0
+  volume: -2
   volumeDelta: 0
   pitch: 0
   pitchDelta: 0
   cooldown: 150
   maxClipCount: 0
-  stealing: 0
-  priority: 125
-  followTarget: 0
-  useSpatializer: 0
-  spatializer: {fileID: 0}
   mixedGroupRef: {fileID: 4752365173948270563, guid: 5e3154ebcd608814fb0fa7ceb121109e, type: 2}
   ignoreTimeScale: 0
   clipRefList:

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Audio;
 using Cards;
 using Character;
 using Location;
@@ -32,6 +33,7 @@ namespace GameManager{
     public CardsManager CardsManager;
     public UobjectsManager UobjectsManager;
     public CurtainsMonitor CurtainsMonitor;
+    public ScoreCounter ScoreCounter;
     
     [Header("Pools")]
     public List<LocationData> LocationsPool = new();
@@ -45,14 +47,18 @@ namespace GameManager{
       Instance = this;
       DontDestroyOnLoad(gameObject);
       GameStage = GameStageE.PreGame;
-      CurtainsMonitor.HideCurtains();
-      Reset(true);
     }
 
-    public void Update(){
-      if (Input.GetKeyDown(KeyCode.Space)){
-        Reset();
-      }
+    public void StartGame(){
+      ScoreCounter.ResetScore();
+      GameStage = GameStageE.Game;
+      AudioController.Instance.Play();
+      Reset(true);
+      CurtainsMonitor.HideCurtains();
+    }
+
+    public void NextLocation(){
+      CurtainsMonitor.ShowCurtains(true,()=>Reset());
     }
 
     public void Reset(bool init = false){

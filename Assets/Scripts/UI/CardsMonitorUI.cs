@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Audio;
 using Cards;
 using DG.Tweening;
 using UI;
@@ -40,6 +41,8 @@ public class CardsMonitorUI : MonoBehaviour{
     }
     
     public void AddCard(CardData cardData) {
+        AudioController.Instance.CardFlip();
+        
         var newCard = Instantiate(CardPrefab, transform.parent);
         newCard.transform.position = transform.position;
         var pos = newCard.RectTransform.anchoredPosition;

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: Clown_Fail
   type: 0
-  volume: 0
+  volume: 1
   volumeDelta: 0
   pitch: 0
   pitchDelta: 0

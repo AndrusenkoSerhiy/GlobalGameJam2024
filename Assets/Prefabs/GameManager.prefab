@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7385037541107818064}
   - component: {fileID: 1242875256655323601}
   - component: {fileID: 1112990251861878409}
+  - component: {fileID: 2609275942062555860}
+  - component: {fileID: 6133218543710666149}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -42,16 +44,20 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8811475813203151234}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a444b310d9a54a9889c46c0a7d77d8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameStage: 0
   CurrentLocationData: {fileID: 0}
   CharactersInLocation: []
   CardsInLocation: []
   HouseManager: {fileID: 1112990251861878409}
   CardsManager: {fileID: 1242875256655323601}
+  UobjectsManager: {fileID: 2609275942062555860}
+  CurtainsMonitor: {fileID: 0}
+  ScoreCounter: {fileID: 6133218543710666149}
   LocationsPool:
   - {fileID: 11400000, guid: c32dce37f9501f34b839e891a9bf50b0, type: 2}
   - {fileID: 11400000, guid: 7405a49ca7b67a545b4ac44c6f5fdeb6, type: 2}
@@ -87,6 +93,32 @@ MonoBehaviour:
   _curHouse: []
   _curRoom: {fileID: 0}
   _prevRoom: {fileID: 0}
+--- !u!114 &2609275942062555860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8811475813203151234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16253ddf270401bb22563ad8191c1fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UobjMonitorUI: {fileID: 0}
+--- !u!114 &6133218543710666149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8811475813203151234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a748e399d814d4f80ef4aca8b2a0ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentScore: 0
 --- !u!1001 &1098279338521161965
 PrefabInstance:
   m_ObjectHideFlags: 0
