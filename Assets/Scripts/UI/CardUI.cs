@@ -11,7 +11,9 @@ namespace UI{
     public CardData CardData;
     public bool IsPlaying;
     public bool CanBePlayed = true;
-    [Header("Components")] public RectTransform RectTransform;
+    [Header("Components")] 
+    public RectTransform RectTransform;
+    public RectTransform BGRectTransform;
     public Image FaceImage;
     public TMP_Text TextLabel;
     public Canvas Canvas;
@@ -86,12 +88,12 @@ namespace UI{
     public void PlayMatchAnimation(){
       Explosion.SetActive(true);
       Sequence seq = DOTween.Sequence();
-      seq.Append(RectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.6f, RotateMode.FastBeyond360));
-      seq.Append(RectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.6f, RotateMode.FastBeyond360));
-      seq.Append(RectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.3f, RotateMode.FastBeyond360));
-      seq.Append(RectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.3f, RotateMode.FastBeyond360));
-      seq.Append(RectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.1f, RotateMode.FastBeyond360));
-      seq.Append(RectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.1f, RotateMode.FastBeyond360));
+      seq.Append(BGRectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.6f, RotateMode.FastBeyond360));
+      seq.Append(BGRectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.6f, RotateMode.FastBeyond360));
+      seq.Append(BGRectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.3f, RotateMode.FastBeyond360));
+      seq.Append(BGRectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.3f, RotateMode.FastBeyond360));
+      seq.Append(BGRectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.1f, RotateMode.FastBeyond360));
+      seq.Append(BGRectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.1f, RotateMode.FastBeyond360));
       seq.Play().OnComplete(() => Destroy(gameObject));
     }
 
