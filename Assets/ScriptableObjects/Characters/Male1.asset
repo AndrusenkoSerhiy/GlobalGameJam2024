@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a22c826f4a84711ac9306d7570fd9cf, type: 3}
+  m_Name: Male1
+  m_EditorClassIdentifier: 
+  MaxMood: 2
+  MinMood: -2
+  PreferedTags:
+  - {fileID: 11400000, guid: 5c4327742c0b22a43979b6d3da83b4c3, type: 2}
+  - {fileID: 11400000, guid: 0bd2c16bd1f276944a887c9db2382d62, type: 2}
+  HatedTags:
+  - {fileID: 11400000, guid: f7678832178b23d47a6b8c7a16c3c1f2, type: 2}
+  Actor: {fileID: 4284369397984253704, guid: a19732a7fbffa6e45872e6a4b0583751, type: 3}
