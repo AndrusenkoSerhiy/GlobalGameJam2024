@@ -32,6 +32,7 @@ namespace GameManager{
     public CardsManager CardsManager;
     public UobjectsManager UobjectsManager;
     public CurtainsMonitor CurtainsMonitor;
+    public ScoreCounter ScoreCounter;
     
     [Header("Pools")]
     public List<LocationData> LocationsPool = new();
@@ -48,6 +49,7 @@ namespace GameManager{
     }
 
     public void StartGame(){
+      ScoreCounter.ResetScore();
       GameStage = GameStageE.Game;
       Reset(true);
       CurtainsMonitor.HideCurtains();
