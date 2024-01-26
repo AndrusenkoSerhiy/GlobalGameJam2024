@@ -138,4 +138,4 @@ MonoBehaviour:
   _width: 6
   _height: 7
   _itemManager: {fileID: 11400000, guid: 1dd9986176d32e340a356ace0a6de6e0, type: 2}
-  _lootPreset: {fileID: 11400000, guid: 15d53c249059b5a48beafa55cc64e544, type: 2}
+  _lootPreset: {fileID: 11400000, guid: 8ae3e106aa3f0f1488a57b9d30125fc0, type: 2}
