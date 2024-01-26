@@ -99,7 +99,7 @@ namespace Rooms{
       var i = 0;
       //create actor ant set in position
       foreach (var charData in GameManager.GameManager.Instance.CharactersInLocation){
-        var actor = Instantiate(charData.Actor, spawnPoint[i].position, Quaternion.identity,
+        var actor = Instantiate(charData.Actor, spawnPoint[i].position, spawnPoint[i].rotation,
           parent: spawnPoint[i].parent);
         actor.Init(charData);
         _actors.Add(actor);

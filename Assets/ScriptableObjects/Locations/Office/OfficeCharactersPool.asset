@@ -13,5 +13,13 @@ MonoBehaviour:
   m_Name: OfficeCharactersPool
   m_EditorClassIdentifier: 
   AllCharacters:
-  - CardData: {fileID: 11400000, guid: a1e314edac222854ebe472a967097a80, type: 2}
-    Count: 6
+  - CardData: {fileID: 11400000, guid: a48d3943eae26de4fb998e7fa5bb7212, type: 2}
+    Count: 1
+  - CardData: {fileID: 11400000, guid: 41ad6c290a3352e49866cc2fd5652824, type: 2}
+    Count: 1
+  - CardData: {fileID: 11400000, guid: 613676125408f5943b4f27ee0e991527, type: 2}
+    Count: 2
+  - CardData: {fileID: 11400000, guid: ecdc7a4fb66d292439b8de9efda953cf, type: 2}
+    Count: 1
+  - CardData: {fileID: 11400000, guid: 7a397b1b26152f0409f5fc9876a4200c, type: 2}
+    Count: 2

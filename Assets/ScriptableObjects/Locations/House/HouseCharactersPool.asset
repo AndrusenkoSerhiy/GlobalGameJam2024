@@ -13,5 +13,11 @@ MonoBehaviour:
   m_Name: HouseCharactersPool
   m_EditorClassIdentifier: 
   AllCharacters:
-  - CardData: {fileID: 11400000, guid: a1e314edac222854ebe472a967097a80, type: 2}
-    Count: 6
+  - CardData: {fileID: 11400000, guid: f5daff1b69b1463469bdf3a28593f87d, type: 2}
+    Count: 1
+  - CardData: {fileID: 11400000, guid: 613676125408f5943b4f27ee0e991527, type: 2}
+    Count: 1
+  - CardData: {fileID: 11400000, guid: b6d560855ad622247ada8e34d623e698, type: 2}
+    Count: 2
+  - CardData: {fileID: 11400000, guid: a48d3943eae26de4fb998e7fa5bb7212, type: 2}
+    Count: 2

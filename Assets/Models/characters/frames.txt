@@ -1,0 +1,17 @@
+people
+1 - Idle
+5 - not funny at all
+10 - well, this joke is so so
+15 - lol
+20 - AHAHAhahH
+25 - MnahahanajkjhhahHAHA! 
+
+mime
+1 - idle
+30 - exploring 
+35 - joke 1
+40 - joke 2
+45 - joke 3
+50 - grabbing in the bag (bag included as separate fbx)
+55 - lose
+60 - win
