@@ -3,6 +3,7 @@ using System.Linq;
 using Audio;
 using Cards;
 using Character;
+using DefaultNamespace;
 using Inventory;
 using Location;
 using Rooms;
@@ -26,6 +27,7 @@ namespace GameManager{
 
     [Header("Current location info")] private int CurLocationIndex = 0;
     public LocationData CurrentLocationData;
+    public MimeAnimation MimePlayer;
     public List<CharacterData> CharactersInLocation = new();
     public List<CardData> CardsInLocation = new();
 
@@ -60,7 +62,7 @@ namespace GameManager{
 
     public void CompleteStage(){
       GameStage = GameStageE.Win;
-
+      
       InventoryUiController.Instance.Hide();
       
       var plInv = InventoryUiController.Instance.GetPlayerInventory();
@@ -77,7 +79,7 @@ namespace GameManager{
 
     public void LoseGame() {
       GameStage = GameStageE.Lose;
-      
+      MimePlayer.PlayMimeAnimation(MimeAnimation.MimeAnimEnum.Lose);
       InventoryUiController.Instance.Hide();
       var plInv = InventoryUiController.Instance.GetPlayerInventory();
       plInv.Clear();
@@ -99,7 +101,7 @@ namespace GameManager{
       CardsInLocation.Clear();
       CharactersInLocation.Clear();
       MoodMonitor.ClearAll();
-      
+      MimePlayer.PlayMimeAnimation(MimeAnimation.MimeAnimEnum.Idle);
       InventoryUiController.Instance.Hide();
       
       var plInv = InventoryUiController.Instance.GetPlayerInventory();
