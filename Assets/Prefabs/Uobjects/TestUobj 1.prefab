@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8197460350257377097}
   - component: {fileID: 1642402662065100634}
   - component: {fileID: 1943003041176489992}
+  - component: {fileID: 2632932710125730771}
   m_Layer: 0
   m_Name: TestUobj 1
   m_TagString: Untagged
@@ -122,3 +123,19 @@ MonoBehaviour:
   isInteracting: 0
   isOpened: 0
   progressBar: {fileID: 0}
+--- !u!114 &2632932710125730771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2173693407385808831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4030b844bdefe45a8a57a21803218c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _width: 6
+  _height: 7
+  _itemManager: {fileID: 11400000, guid: 1dd9986176d32e340a356ace0a6de6e0, type: 2}
+  _lootPreset: {fileID: 11400000, guid: 15d53c249059b5a48beafa55cc64e544, type: 2}

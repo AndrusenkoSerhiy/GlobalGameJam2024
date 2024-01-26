@@ -1,3 +1,5 @@
+using Inventory;
+using Inventory.Inventory;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,17 +10,25 @@ namespace Uobjects{
       return uobj;
     }
     
-    
     public float interactionTime = 5f;  // Time required for interaction in seconds
     private float currentTime = 0f;
     public bool isInteracting;
     public bool isOpened;
+
+    private InventoryDefinition _inventoryDef;
 
     public Image progressBar;
 
     public void SetImage(Image img){
       progressBar = img;
     }
+
+    public void InitInventory()
+    {
+      _inventoryDef = gameObject.GetComponent<InventoryDefinition>();
+      _inventoryDef.Init();
+    }
+    
     void Update(){
       if (isInteracting)
       {
@@ -41,8 +51,9 @@ namespace Uobjects{
     {
       // Implement the logic to open the object
       isOpened = true;
-      Debug.LogError("Object opened! Show inventory");
       ResetInteraction();
+      
+      InventoryUiController.Instance.Show(_inventoryDef.Inventory);
     }
 
     void ResetInteraction()

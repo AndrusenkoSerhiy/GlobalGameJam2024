@@ -16,6 +16,7 @@ namespace UI{
     public void Init(Uobject uobj){
       target = uobj;
       target.SetImage(uiImageTest);
+      target.InitInventory();
     }
     
     void Update()
