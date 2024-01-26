@@ -58,7 +58,7 @@ namespace UI{
       
       //main
       float yM = MainCurtain.anchoredPosition.y;
-      var endYM = yM - 1108f;
+      var endYM = yM - 1200f;
       DOTween.To(() => yM, dy => yM = dy, endYM, 1.5f).SetEase(Ease.Linear).OnUpdate(() => {
         var pos = MainCurtain.anchoredPosition;
         pos.y = yM;
@@ -96,7 +96,7 @@ namespace UI{
       
       //main
       float yM = MainCurtain.anchoredPosition.y;
-      var endYM = yM + 1108f;
+      var endYM = yM + 1200f;
       DOTween.To(() => yM, dy => yM = dy, endYM, 2f).SetEase(Ease.Linear).OnUpdate(() => {
         var pos = MainCurtain.anchoredPosition;
         pos.y = yM;
