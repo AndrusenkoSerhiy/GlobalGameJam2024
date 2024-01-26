@@ -1,4 +1,5 @@
 using System;
+using Audio;
 using Cards;
 using DG.Tweening;
 using TMPro;
@@ -51,6 +52,9 @@ namespace UI
         {
             if (!CanBePlayed) return;
             IsPlaying = true;
+            
+            AudioController.Instance.Joke();
+            
             transform.SetParent(transform.parent.parent);
             GraphicRaycaster.enabled = false;
             SetCustomSorting();
@@ -79,6 +83,8 @@ namespace UI
 
         public void PlayMismatchAnimation()
         {
+            AudioController.Instance.CardFail();
+            
             Poison.SetActive(true); //x
             float x = RectTransform.anchoredPosition.x;
             var endX = x;
@@ -102,6 +108,8 @@ namespace UI
 
         public void PlayMatchAnimation()
         {
+            AudioController.Instance.CardSuccess();
+            
             Explosion.SetActive(true);
             Sequence seq = DOTween.Sequence();
             seq.Append(BGRectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.6f, RotateMode.FastBeyond360));

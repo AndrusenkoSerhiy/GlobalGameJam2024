@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Audio;
 using Cards;
 using Character;
 using Location;
@@ -49,6 +50,7 @@ namespace GameManager{
 
     public void StartGame(){
       GameStage = GameStageE.Game;
+      AudioController.Instance.Play();
       Reset(true);
       CurtainsMonitor.HideCurtains();
     }

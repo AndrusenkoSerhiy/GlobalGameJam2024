@@ -17,14 +17,7 @@ namespace Audio
             Simple = 1,
             Looped = 2,
         }
-
-        public enum AudioStealingTypeE
-        {
-            None = 0,
-            Oldest = 1,
-            Furthest = 2,
-        }
-
+        
         //Params
         public AudioTypeE type = AudioTypeE.OneShot;
 

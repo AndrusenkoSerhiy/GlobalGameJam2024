@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: Clown_Joke
   type: 0
-  volume: 0
+  volume: 3
   volumeDelta: 0
   pitch: 0
   pitchDelta: 0

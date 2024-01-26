@@ -1,4 +1,5 @@
 using System;
+using Audio;
 using DG.Tweening;
 using UnityEngine;
 
@@ -20,7 +21,10 @@ namespace UI{
     }
 
     public void ShowCurtains(bool forceHiding = true, Action onCompleteAll = null){
+      AudioController.Instance.Curtains();
+      
       SwitchLabels();
+      
       //right
       float xR = RightCurtain.anchoredPosition.x;
       var endXR = 60f;
@@ -54,6 +58,8 @@ namespace UI{
     }
     
     public void HideCurtains(){
+      AudioController.Instance.Curtains();
+      
       float xR = RightCurtain.anchoredPosition.x;
       var endXR = 400f;
       DOTween.To(() => xR, dx => xR = dx, endXR, 1.5f).SetEase(Ease.Linear).OnUpdate(() => {
