@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NameText: Squirting Ink Pen
   TagsList:
-  - {fileID: 11400000, guid: 0bd2c16bd1f276944a887c9db2382d62, type: 2}
+  - {fileID: 11400000, guid: f7678832178b23d47a6b8c7a16c3c1f2, type: 2}
   FaceSprite: {fileID: 21300000, guid: da271becb1a8d4a48bb2b388773b6a76, type: 3}
