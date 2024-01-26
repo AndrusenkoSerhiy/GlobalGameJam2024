@@ -5,7 +5,10 @@ using UnityEngine.EventSystems;
 namespace UI{
   public class NavigationButton: MonoBehaviour,IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler{
     public int index;
+    public bool isClicked;
     public void OnPointerClick(PointerEventData eventData){
+      if (isClicked) return;
+      isClicked = true;
       GameManager.GameManager.Instance.HouseManager.UpdateRoom(index);
     }
 

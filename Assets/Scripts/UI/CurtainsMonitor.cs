@@ -15,7 +15,12 @@ namespace UI{
     public GameObject LoseLabel;
     public GameObject NextLabel;
     public GameObject StartLabel;
+    public NavigationButton PreviousRoom;
+    public NavigationButton NextRoom;
 
+    private void Awake(){
+      PreviousRoom.gameObject.SetActive(false);
+    }
     void SwitchLabels(){
       StartLabel.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.PreGame);
       LoseLabel.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.Lose);
@@ -66,6 +71,11 @@ namespace UI{
     }
     
     public void HideCurtains(){
+      PreviousRoom.gameObject.SetActive(GameManager.GameManager.Instance.HouseManager.CanPevRoom());
+      NextRoom.gameObject.SetActive(GameManager.GameManager.Instance.HouseManager.CanNextRoom());
+      PreviousRoom.isClicked = false;
+      NextRoom.isClicked = false;
+      
       AudioController.Instance.Curtains();
       
       float xR = RightCurtain.anchoredPosition.x;

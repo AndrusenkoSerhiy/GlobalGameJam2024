@@ -80,6 +80,13 @@ namespace Rooms{
       UpdateRoom(index);
     }
 
+    public bool CanPevRoom(){
+      return _curRoom.RoomIndex > 0;
+    }
+
+    public bool CanNextRoom(){
+      return _curRoom.RoomIndex < _curHouse.Count - 1;
+    }
     public void UpdateRoom(int direction){
       if (_curRoom.RoomIndex <= 0 && direction < 0 ||
           _curRoom.RoomIndex >= _curHouse.Count - 1 && direction > 0) return;
