@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 2609275942062555860}
   - component: {fileID: 6133218543710666149}
   - component: {fileID: 4090885313328743827}
-  - component: {fileID: 4793947896650959387}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -64,6 +63,7 @@ MonoBehaviour:
   UobjectsManager: {fileID: 2609275942062555860}
   CurtainsMonitor: {fileID: 0}
   ScoreCounter: {fileID: 6133218543710666149}
+  LocationTimerMonitor: {fileID: 0}
   LocationsPool:
   - {fileID: 11400000, guid: c32dce37f9501f34b839e891a9bf50b0, type: 2}
   - {fileID: 11400000, guid: 7405a49ca7b67a545b4ac44c6f5fdeb6, type: 2}
@@ -141,21 +141,6 @@ MonoBehaviour:
   _cellSpriteEmpty: {fileID: 0}
   _cellSpriteSelected: {fileID: 0}
   _cellSpriteBlocked: {fileID: 0}
---- !u!114 &4793947896650959387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8811475813203151234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b93e716edad216542b230c9ad2e47305, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InventoryRoot: {fileID: 0}
-  PlayerInv: {fileID: 0}
-  LootInv: {fileID: 0}
 --- !u!1001 &1098279338521161965
 PrefabInstance:
   m_ObjectHideFlags: 0

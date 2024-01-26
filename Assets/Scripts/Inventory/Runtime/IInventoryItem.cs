@@ -34,6 +34,8 @@ namespace FarrokhGames.Inventory
         /// Returns true if this item can be dropped on the ground
         /// </summary>
         bool canDrop { get; }
+        
+        int price { get; }
     }
 
     internal static class InventoryItemExtensions

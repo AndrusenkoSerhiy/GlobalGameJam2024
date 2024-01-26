@@ -1,7 +1,9 @@
 using System.Collections.Generic;
+using System.Linq;
 using Audio;
 using Cards;
 using Character;
+using Inventory;
 using Location;
 using Rooms;
 using UI;
@@ -58,8 +60,18 @@ namespace GameManager{
 
     public void CompleteStage(){
       GameStage = GameStageE.Win;
-      CurtainsMonitor.SummaryLabel.text = "You sold 25 items ...... " + ScoreCounter.CurrentScore + " coins";
+
+      InventoryUiController.Instance.Hide();
+      
+      var plInv = InventoryUiController.Instance.GetPlayerInventory();
+      var itemCount = plInv.allItems.Length;
+      var itemCost = plInv.allItems.Sum(item => item.price);
+      plInv.Clear();
+      
+      CurtainsMonitor.SummaryLabel.text = $"You sold {itemCount} items for {itemCost} coins";// + ScoreCounter.CurrentScore + " coins";
       CurtainsMonitor.ShowCurtains(false);
+      
+      AudioController.Instance.Win(); //Lose
     }
 
     public void NextLocation(){

@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 2497804764190526674}
   - component: {fileID: 2791654617761266477}
   m_Layer: 5
-  m_Name: InventoriesUI
+  m_Name: InventoryUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,9 +116,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93e716edad216542b230c9ad2e47305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventoryRoot: {fileID: 5478476871833141658}
-  PlayerRenderer: {fileID: 114425895515657302}
-  LootRenderer: {fileID: 6952879898453596918}
+  inventoryRoot: {fileID: 6245044843733968328}
+  playerRenderer: {fileID: 114425895515657302}
+  lootRenderer: {fileID: 6952879898453596918}
 --- !u!114 &2791654617761266477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -793,7 +793,7 @@ GameObject:
   - component: {fileID: 9040137413174367664}
   - component: {fileID: 1711673906505990406}
   m_Layer: 5
-  m_Name: Root
+  m_Name: InventoryRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

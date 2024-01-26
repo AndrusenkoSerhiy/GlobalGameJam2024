@@ -6,42 +6,47 @@ namespace Inventory
 {
     internal class InventoryUiController : MonoBehaviour
     {
-        public RectTransform InventoryRoot;
-        
-        public InventoryRenderer PlayerRenderer;
-        public InventoryRenderer LootRenderer;
+        public GameObject inventoryRoot;
+
+        public InventoryRenderer playerRenderer;
+        public InventoryRenderer lootRenderer;
 
         public static InventoryUiController Instance;
-        
+
         private InventoryDefinition _playerInv;
 
         private void Start()
         {
             if (Instance != null)
                 return;
-            
+
             Hide();
 
             _playerInv = gameObject.GetComponent<InventoryDefinition>();
             _playerInv.Init();
-            
-            PlayerRenderer.SetInventory(_playerInv.Inventory, InventoryRenderMode.Grid);
+
+            playerRenderer.SetInventory(_playerInv.Inventory, InventoryRenderMode.Grid);
 
             Instance = this;
         }
 
+        public InventoryManager GetPlayerInventory() => _playerInv.Inventory;
+
         public void Show(InventoryManager uobjInv)
         {
-            LootRenderer.SetInventory(uobjInv, InventoryRenderMode.Grid);
-            
-            if (!InventoryRoot.gameObject.activeInHierarchy)
-                InventoryRoot.gameObject.SetActive(true);
+            lootRenderer.SetInventory(uobjInv, InventoryRenderMode.Grid);
+
+            if (!inventoryRoot.activeInHierarchy)
+                inventoryRoot.SetActive(true);
         }
 
         public void Hide()
         {
-            if (InventoryRoot.gameObject.activeInHierarchy)
-                InventoryRoot.gameObject.SetActive(false);
+            if (inventoryRoot == null)
+                inventoryRoot = GameObject.Find("InventoryRoot").gameObject;
+
+            if (inventoryRoot.activeInHierarchy)
+                inventoryRoot.SetActive(false);
         }
 
         public void OnCloseClick() => Hide();
