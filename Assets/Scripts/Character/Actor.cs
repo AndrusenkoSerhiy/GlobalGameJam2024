@@ -30,6 +30,7 @@ namespace Character {
         timer += Time.deltaTime;
         if (timer >= 20f) {
           CurMood--;
+          ChangeAnimation();
           timer = 0f;
         }
       }
