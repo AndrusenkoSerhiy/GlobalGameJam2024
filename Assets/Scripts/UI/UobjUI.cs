@@ -16,17 +16,18 @@ namespace UI{
     public void Init(Uobject uobj){
       target = uobj;
       target.SetImage(uiImageTest);
-      
     }
+    
     void Update()
     {
-      if (target != null)
+      if (target != null && uiImage != null)
       {
-        // Convert 3D object's position to screen space
-        Vector3 targetPosition = Camera.main.WorldToScreenPoint(target.transform.position + _offset);
+        // Convert 3D object's position to screen space using UI camera
+        RectTransform canvasRectTransform = uiImage.canvas.GetComponent<RectTransform>();
+        Vector2 screenPosition = RectTransformUtility.WorldToScreenPoint(Camera.main, target.transform.position);
 
-        // Set the UI image's position to the converted screen space position
-        uiImage.transform.position = targetPosition;
+        // Set the UI image's anchored position
+        uiImage.rectTransform.anchoredPosition = screenPosition - canvasRectTransform.sizeDelta / 2f;
       }
     }
 
