@@ -94,7 +94,7 @@ namespace Rooms{
         var newIndex = _curRoom.RoomIndex + direction;
         SetCurRoom(newIndex);
         SetRoomPos();
-        _curRoom.ActorsInRoom.ForEach(a=>a.InitMood());
+        _curRoom.ActorsInRoom.ForEach(a => a.InitMood());
       });
     }
 
@@ -111,6 +111,7 @@ namespace Rooms{
           parent: spawnPoint[i].parent);
         actor.Init(charData);
         _actors.Add(actor);
+        GameManager.GameManager.Instance.MoodMonitor.AddMoodBar(actor, charData);
         i++;
       }
 

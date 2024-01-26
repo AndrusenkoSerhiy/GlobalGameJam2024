@@ -33,6 +33,7 @@ namespace GameManager{
     public CurtainsMonitor CurtainsMonitor;
     public ScoreCounter ScoreCounter;
     public LocationTimerMonitor LocationTimerMonitor;
+    public MoodMonitor MoodMonitor;
 
     [Header("Pools")] public List<LocationData> LocationsPool = new();
 
