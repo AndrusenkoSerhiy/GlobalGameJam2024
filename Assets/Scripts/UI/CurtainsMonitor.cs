@@ -17,9 +17,6 @@ namespace UI{
     public GameObject StartLabel;
 
     void SwitchLabels(){
-      PlayButton.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.PreGame ||
-                           GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.Lose);
-      NextButton.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.Win);
       StartLabel.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.PreGame);
       LoseLabel.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.Lose);
       NextLabel.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.Win);
@@ -39,12 +36,16 @@ namespace UI{
         var pos = RightCurtain.anchoredPosition;
         pos.x = xR;
         RightCurtain.anchoredPosition = pos;
+      }).OnComplete(() => {
+        PlayButton.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.PreGame ||
+                             GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.Lose);
+        NextButton.SetActive(GameManager.GameManager.Instance.GameStage == GameManager.GameManager.GameStageE.Win);
       });
       
       //left
       float xL = LeftCurtain.anchoredPosition.x;
       var endXL = 335f;
-      DOTween.To(() => xL, dx => xL = dx, endXL, 2f).SetEase(Ease.Linear).OnUpdate(() => {
+      DOTween.To(() => xL, dx => xL = dx, endXL, 1.5f).SetEase(Ease.Linear).OnUpdate(() => {
         var pos = LeftCurtain.anchoredPosition;
         pos.x = xL;
         LeftCurtain.anchoredPosition = pos;
