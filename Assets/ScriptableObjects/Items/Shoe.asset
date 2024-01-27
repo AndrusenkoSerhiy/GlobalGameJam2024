@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92e9099dba1c24dcda700fa19b64a47b, type: 3}
-  m_Name: Rabbit
+  m_Name: Shoe
   m_EditorClassIdentifier: 
-  _name: 'Half-Eaten chocolate Hare '
-  _sprite: {fileID: 21300000, guid: efd35cbaeecf5eb4c999b2ec205ed3e4, type: 3}
+  _name: Bling Boot
+  _sprite: {fileID: 21300000, guid: cf25c20b65f416d4789370fdcb0fcbcf, type: 3}
   _shape:
     _width: 2
     _height: 2
-    _shape: 01010101
-  _price: 2
+    _shape: 01000101
+  _price: 500
   _tags:
-  - {fileID: 11400000, guid: 89f453591ba0921469b812e67accf68e, type: 2}
-  - {fileID: 11400000, guid: 38fcdf4b21ca3b34faedeb1b59fbf3bb, type: 2}
-  - {fileID: 11400000, guid: 870bb3ac007085e458815a6e9d62205b, type: 2}
+  - {fileID: 11400000, guid: 61c359abde6c4454b9ec8cdc0e64a341, type: 2}
+  - {fileID: 11400000, guid: 8383971a633abbd42bde81303600aa5e, type: 2}
   _position: {x: 0, y: 0}

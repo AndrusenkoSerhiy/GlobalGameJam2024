@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92e9099dba1c24dcda700fa19b64a47b, type: 3}
-  m_Name: Rabbit
+  m_Name: Remote1
   m_EditorClassIdentifier: 
-  _name: 'Half-Eaten chocolate Hare '
-  _sprite: {fileID: 21300000, guid: efd35cbaeecf5eb4c999b2ec205ed3e4, type: 3}
+  _name: Channel Commander
+  _sprite: {fileID: 21300000, guid: 5856aeca7fa0bfb4bb5b697229c8c393, type: 3}
   _shape:
-    _width: 2
+    _width: 4
     _height: 2
-    _shape: 01010101
-  _price: 2
+    _shape: 0101010101010101
+  _price: 13
   _tags:
-  - {fileID: 11400000, guid: 89f453591ba0921469b812e67accf68e, type: 2}
+  - {fileID: 11400000, guid: 71d6045278bc25b48a935c1fa335f020, type: 2}
+  - {fileID: 11400000, guid: 95f6c7b142793e0459db4414bc7ff175, type: 2}
   - {fileID: 11400000, guid: 38fcdf4b21ca3b34faedeb1b59fbf3bb, type: 2}
-  - {fileID: 11400000, guid: 870bb3ac007085e458815a6e9d62205b, type: 2}
   _position: {x: 0, y: 0}

@@ -20,9 +20,5 @@ MonoBehaviour:
     _shape: 0101
   _price: 1
   _tags:
-  - {fileID: 11400000, guid: ccbc24af5f546b84490472b95122c0cd, type: 2}
-  - {fileID: 11400000, guid: 89f453591ba0921469b812e67accf68e, type: 2}
-  - {fileID: 11400000, guid: c4d59701f9a8fab4587ef142bbc921c8, type: 2}
-  - {fileID: 11400000, guid: 02aeb6a45ff19f844b8797cdd719e73d, type: 2}
-  - {fileID: 11400000, guid: 8383971a633abbd42bde81303600aa5e, type: 2}
+  - {fileID: 11400000, guid: 71d6045278bc25b48a935c1fa335f020, type: 2}
   _position: {x: 0, y: 0}

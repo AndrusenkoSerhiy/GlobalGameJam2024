@@ -22,4 +22,5 @@ MonoBehaviour:
   _tags:
   - {fileID: 11400000, guid: 61c359abde6c4454b9ec8cdc0e64a341, type: 2}
   - {fileID: 11400000, guid: 95f6c7b142793e0459db4414bc7ff175, type: 2}
+  - {fileID: 11400000, guid: 38fcdf4b21ca3b34faedeb1b59fbf3bb, type: 2}
   _position: {x: 0, y: 0}
