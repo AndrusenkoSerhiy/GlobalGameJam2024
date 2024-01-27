@@ -20,3 +20,9 @@ MonoBehaviour:
     probability: 35
   - tag: {fileID: 11400000, guid: 89f453591ba0921469b812e67accf68e, type: 2}
     probability: 15
+  - tag: {fileID: 11400000, guid: 89f453591ba0921469b812e67accf68e, type: 2}
+    probability: 15
+  - tag: {fileID: 11400000, guid: 89f453591ba0921469b812e67accf68e, type: 2}
+    probability: 15
+  - tag: {fileID: 11400000, guid: 89f453591ba0921469b812e67accf68e, type: 2}
+    probability: 15
