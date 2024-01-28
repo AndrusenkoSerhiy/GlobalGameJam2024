@@ -34,8 +34,10 @@ namespace Uobjects {
     void Update() {
       if (isInteracting) {
         GameManager.GameManager.Instance.MimePlayer.SetInteract(this);
-        if (GameManager.GameManager.Instance.CheckLoseCondition()) {
+        GameManager.GameManager.Instance.CheckLineSight();
+        if (currentTime>=1f && GameManager.GameManager.Instance.CheckLoseCondition()) {
           ResetInteraction();
+          GameManager.GameManager.Instance.CheckLineSight(true);
           GameManager.GameManager.Instance.UobjectsManager.UobjMonitorUI.DestroyAllUobjUI();
           return;
         }

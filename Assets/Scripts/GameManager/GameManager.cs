@@ -39,6 +39,7 @@ namespace GameManager{
     public LocationTimerMonitor LocationTimerMonitor;
     public MoodMonitor MoodMonitor;
     public RoomInfoMonitor RoomInfoMonitor;
+    public LineRenderer LineSight;
 
     [Header("Pools")] public List<LocationData> LocationsPool = new();
 
@@ -99,6 +100,7 @@ namespace GameManager{
 
     public void Reset(bool init = false){
       //ClearOld
+      LineSight.gameObject.SetActive(false);
       CardsInLocation.Clear();
       CharactersInLocation.Clear();
       MoodMonitor.ClearAll();
@@ -123,8 +125,31 @@ namespace GameManager{
       LocationTimerMonitor.Init(CurrentLocationData);
     }
 
+    public void CheckLineSight(bool forceClear = false) {
+      if (forceClear) {
+        LineSight.gameObject.SetActive(false);
+        return;
+      }
+      if (LineSight.gameObject.activeInHierarchy) return;
+      var actors = HouseManager.CurRoom.ActorsInRoom.FindAll(c => c.CurMood <= 0);
+      if (actors.Any()) {
+        var actor = actors[Random.Range(0, actors.Count)];
+        var startPos = actor.transform.position;
+        var endPos = MimePlayer.transform.position;
+        startPos.y += 1.16f;
+        endPos.y += 1.16f;
+        LineSight.SetPosition(0,startPos);
+        LineSight.SetPosition(1,endPos);
+        LineSight.gameObject.SetActive(true);
+      }
+      else {
+        LineSight.gameObject.SetActive(false);
+      }
+    }
+
     public bool CheckLoseCondition() {
-      if (HouseManager.CurRoom.ActorsInRoom.Any(c => c.CurMood <= 0) ) {
+      var actors = HouseManager.CurRoom.ActorsInRoom.FindAll(c => c.CurMood <= 0);
+      if (actors.Any() ) {
         LoseGame();
         return true;
       }
