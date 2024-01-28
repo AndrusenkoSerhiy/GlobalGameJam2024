@@ -9,6 +9,8 @@ namespace Character{
     public int MinMood;
     public List<Tag> PreferedTags = new();
     public List<Tag> HatedTags = new();
-    public Actor Actor;
+    [SerializeField]
+    private List<Actor> actorsPrefabs = new();
+    public Actor Actor=>actorsPrefabs[Random.Range(0,actorsPrefabs.Count)];
   }
 }

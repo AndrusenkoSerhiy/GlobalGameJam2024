@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 013623e57843416bba798e4bf5fa0b4e, type: 3}
+  m_Name: TutorHouse
+  m_EditorClassIdentifier: 
+  TimeForCompletion: 60
+  SessionCardsMaxCount: 6
+  SessionCharsMaxCount: 3
+  CardsPool: {fileID: 11400000, guid: f3c77135aa79e7243b5bf3efa8e29d45, type: 2}
+  CharactersPool: {fileID: 11400000, guid: b304baa01df5e2548a0c27b61e703317, type: 2}
+  HouseRooms: 1
+  AvailableRooms:
+  - {fileID: 610359895190484661, guid: 6ff387c848ab9e44f8f00aefaa120bee, type: 3}
+  - {fileID: 610359895190484661, guid: 7ff0446fdd12706448879ee3047d2ca5, type: 3}

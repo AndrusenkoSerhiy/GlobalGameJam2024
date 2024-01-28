@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a22c826f4a84711ac9306d7570fd9cf, type: 3}
+  m_Name: TutorCharacter
+  m_EditorClassIdentifier: 
+  MaxMood: 2
+  MinMood: -2
+  PreferedTags:
+  - {fileID: 11400000, guid: 5c4327742c0b22a43979b6d3da83b4c3, type: 2}
+  HatedTags:
+  - {fileID: 11400000, guid: f7678832178b23d47a6b8c7a16c3c1f2, type: 2}
+  actorsPrefabs:
+  - {fileID: 4284369397984253704, guid: 9685526d0027d194b90255f1b847f91e, type: 3}
+  - {fileID: 4284369397984253704, guid: f695ecc05de95bf41912d08f0ac13809, type: 3}
+  - {fileID: 4284369397984253704, guid: 6442f329039499946a6717fad40a389e, type: 3}
+  - {fileID: 4284369397984253704, guid: 3d2ae92d2259d3042bcb0bcf09e3be3e, type: 3}
+  - {fileID: 4284369397984253704, guid: a19732a7fbffa6e45872e6a4b0583751, type: 3}
+  - {fileID: 4284369397984253704, guid: c82d5d9a09746684fa3b9e000a6ced46, type: 3}
+  - {fileID: 4284369397984253704, guid: d55bae67731f67147a85b18e005569b4, type: 3}
+  - {fileID: 4284369397984253704, guid: 5d000a6245829e248a939bfb7a1b659c, type: 3}
