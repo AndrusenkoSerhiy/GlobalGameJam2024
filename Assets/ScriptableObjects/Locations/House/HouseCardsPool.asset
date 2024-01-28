@@ -13,59 +13,9 @@ MonoBehaviour:
   m_Name: HouseCardsPool
   m_EditorClassIdentifier: 
   AllCards:
+  - CardData: {fileID: 11400000, guid: 6530c31d957988f41851a0f679c9a881, type: 2}
+    Count: 5
   - CardData: {fileID: 11400000, guid: 394f5b8a88139084e905a5ca2e739a5f, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: 394f5b8a88139084e905a5ca2e739a5f, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: f2e6e3f5a4d6b73468408b7c47d39bb2, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: a8ecd6ba66b61c244ab2021f85a3d41d, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: 7f2500ab617331a4eb33445a3541fc4f, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: d63adbb09d6e162438928a9ae70e8e96, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: 2dd36d20d952aea49b6bbc0a7060776b, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: 4b1c945359ed7214dba22184301a812d, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: 6e26657dd2aff7b4daa02f70642a0ad2, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: de7223acff278a24199a84028ca6c73f, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: 12b9eeb980fe46541b95f96730d470b6, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: e95b26846ac8f06449592eaf08ba322b, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: 6443f00dc65bdfc41a506c483ecb06df, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: fe31f99944982024f9faf05963d7e023, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: 406321641928d97408fc89069e6f3225, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: 13fa01cf5279de249b281ecbca63529c, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: 4ee874e0e4462d14e9eb70cc23094776, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: 15f03e2a2cb2a3f4ca7bf863e6e1d616, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: cf643fd5d987ba648bfbb7c78a5dddb7, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: 41d1a9bec30887f4ab224c3629fe8c90, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: f8eba9f014561d14ab2ba18e1da5521f, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: be0f7e6ed4a7cf94dbcc968ad2d91385, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: 6310b5cc65a9be547ad93d89934c0589, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: d3a4a3189035a764fad81427c86ec9a7, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: ea91850d09c42d7429ce7536f44c70c8, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: e59e965ad0479454a8bd5c5941029e9d, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: cb08e491edef83f41860e1e906fb9aea, type: 2}
-    Count: 1
-  - CardData: {fileID: 11400000, guid: cb1820a224e2ad94f9f2ef58a6f177fe, type: 2}
-    Count: 1
+    Count: 5
+  - CardData: {fileID: 11400000, guid: 84aa85dd6e4f31c4d8f75247d9afc5e9, type: 2}
+    Count: 5
