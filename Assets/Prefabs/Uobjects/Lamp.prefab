@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb8e8034fa0d4c96ace0c46aa47062dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionTime: 2
+  interactionTime: 1
   isInteracting: 0
   isOpened: 0
   progressBar: {fileID: 0}
@@ -65,7 +65,7 @@ MonoBehaviour:
   _width: 6
   _height: 7
   _itemManager: {fileID: 11400000, guid: 1dd9986176d32e340a356ace0a6de6e0, type: 2}
-  _lootPreset: {fileID: 11400000, guid: 15d53c249059b5a48beafa55cc64e544, type: 2}
+  _lootPreset: {fileID: 11400000, guid: e298bf89ba1383140abb3f48d5e3ea17, type: 2}
 --- !u!1001 &8492428028453495130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76,15 +76,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1963f65e878749448ae971a70b52ecdd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0031303167
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1963f65e878749448ae971a70b52ecdd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.1662207
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1963f65e878749448ae971a70b52ecdd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.503592
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1963f65e878749448ae971a70b52ecdd, type: 3}
       propertyPath: m_LocalRotation.w

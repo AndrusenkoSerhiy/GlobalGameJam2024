@@ -10,7 +10,7 @@ namespace UI{
     public Uobject target;  // Reference to the 3D object
     public Image uiImage;
     public Image uiImageTest;
-    [SerializeField] private Vector3 _offset;
+    
     private Tweener tween;
     private Camera _camera;
     private Canvas _canvas;

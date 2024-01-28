@@ -65,7 +65,7 @@ MonoBehaviour:
   _width: 6
   _height: 7
   _itemManager: {fileID: 11400000, guid: 1dd9986176d32e340a356ace0a6de6e0, type: 2}
-  _lootPreset: {fileID: 11400000, guid: 15d53c249059b5a48beafa55cc64e544, type: 2}
+  _lootPreset: {fileID: 11400000, guid: 0d7dbe75b0295a4478d95b8e25ba19ea, type: 2}
 --- !u!1001 &788442087186089410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76,7 +76,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3ea0999a296af8b41a3d8f600e52895e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.3358526
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3ea0999a296af8b41a3d8f600e52895e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -84,7 +84,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3ea0999a296af8b41a3d8f600e52895e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.746738
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3ea0999a296af8b41a3d8f600e52895e, type: 3}
       propertyPath: m_LocalRotation.w

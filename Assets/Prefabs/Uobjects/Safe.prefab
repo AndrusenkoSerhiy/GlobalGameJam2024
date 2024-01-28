@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2173693407385808831}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7640913, y: 4.1662207, z: -5.728552}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb8e8034fa0d4c96ace0c46aa47062dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionTime: 2
+  interactionTime: 3
   isInteracting: 0
   isOpened: 0
   progressBar: {fileID: 0}
@@ -65,7 +65,7 @@ MonoBehaviour:
   _width: 6
   _height: 7
   _itemManager: {fileID: 11400000, guid: 1dd9986176d32e340a356ace0a6de6e0, type: 2}
-  _lootPreset: {fileID: 11400000, guid: 15d53c249059b5a48beafa55cc64e544, type: 2}
+  _lootPreset: {fileID: 11400000, guid: cc876931780fafa4e861336ddf72117b, type: 2}
 --- !u!1001 &4047652859220849033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76,15 +76,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a3b7e3753dd2e3e40be41ae77d85f22e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.4487803
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a3b7e3753dd2e3e40be41ae77d85f22e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.1662035
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a3b7e3753dd2e3e40be41ae77d85f22e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.185585
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a3b7e3753dd2e3e40be41ae77d85f22e, type: 3}
       propertyPath: m_LocalRotation.w
