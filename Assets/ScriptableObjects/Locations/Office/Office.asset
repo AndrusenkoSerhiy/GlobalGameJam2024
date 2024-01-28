@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 013623e57843416bba798e4bf5fa0b4e, type: 3}
   m_Name: Office
   m_EditorClassIdentifier: 
-  TimeForCompletion: 100
+  TimeForCompletion: 120
   SessionCardsMaxCount: 9
   SessionCharsMaxCount: 6
   CardsPool: {fileID: 11400000, guid: de733a5220b082342a9b6b84b2e18fa4, type: 2}
   CharactersPool: {fileID: 11400000, guid: 5501d5beb174a6a46bb579bfa65c890a, type: 2}
   HouseRooms: 3
   AvailableRooms:
+  - {fileID: 610359895190484661, guid: 78d8041a72879964887fbfb4043b1f3d, type: 3}
+  - {fileID: 610359895190484661, guid: 96b15cd03a23cee439c673cf41a97771, type: 3}
   - {fileID: 610359895190484661, guid: 78d8041a72879964887fbfb4043b1f3d, type: 3}
   - {fileID: 610359895190484661, guid: 96b15cd03a23cee439c673cf41a97771, type: 3}
