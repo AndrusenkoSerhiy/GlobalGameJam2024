@@ -14,4 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllCharacters:
   - CardData: {fileID: 11400000, guid: 934dc89ca252d98409a31399883f1668, type: 2}
-    Count: 10
+    Count: 5
+  - CardData: {fileID: 11400000, guid: 2ac30b74c4fb6be4eadf8be44acf2b8d, type: 2}
+    Count: 5
+  - CardData: {fileID: 11400000, guid: 05ff2279b5f24f74b98b318f7a2982cb, type: 2}
+    Count: 5
+  - CardData: {fileID: 11400000, guid: eff2181912671da4291530db453a356b, type: 2}
+    Count: 5
+  - CardData: {fileID: 11400000, guid: 934dc89ca252d98409a31399883f1668, type: 2}
+    Count: 5
+  - CardData: {fileID: 11400000, guid: 2ac30b74c4fb6be4eadf8be44acf2b8d, type: 2}
+    Count: 5

@@ -106,7 +106,7 @@ namespace UI {
       seq.Append(BGRectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.3f, RotateMode.FastBeyond360));
       seq.Append(BGRectTransform.DORotate(new Vector3(0f, 180f, 0f), 0.1f, RotateMode.FastBeyond360));
       seq.Append(BGRectTransform.DORotate(new Vector3(0f, 0f, 0f), 0.1f, RotateMode.FastBeyond360));
-      seq.Play().OnComplete(() => Destroy(gameObject));
+      seq.Play().OnComplete(() => Destroy(gameObject)).OnKill(() => Destroy(gameObject));
     }
 
     public void OnPointerEnter(PointerEventData eventData) {
