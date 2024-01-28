@@ -17,9 +17,7 @@ MonoBehaviour:
   SessionCharsMaxCount: 6
   CardsPool: {fileID: 11400000, guid: de733a5220b082342a9b6b84b2e18fa4, type: 2}
   CharactersPool: {fileID: 11400000, guid: 5501d5beb174a6a46bb579bfa65c890a, type: 2}
-  HouseRooms: 3
+  HouseRooms: 2
   AvailableRooms:
-  - {fileID: 610359895190484661, guid: 78d8041a72879964887fbfb4043b1f3d, type: 3}
-  - {fileID: 610359895190484661, guid: 96b15cd03a23cee439c673cf41a97771, type: 3}
   - {fileID: 610359895190484661, guid: 78d8041a72879964887fbfb4043b1f3d, type: 3}
   - {fileID: 610359895190484661, guid: 96b15cd03a23cee439c673cf41a97771, type: 3}

@@ -51,7 +51,7 @@ namespace DefaultNamespace {
       var dir = pos - transform.position;
       Vector3 newPosition = pos - dir.normalized * 2f;
       // Set the position of A to the new position
-      //transform.position = newPosition;
+      transform.position = newPosition;
       //transform.position = uobj.transform.position;
 
       Quaternion targetRotation = Quaternion.LookRotation(dir);
